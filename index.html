@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="City Coolers Engineering — Premium HVAC installation, maintenance, and repair services in Takoradi, Ghana. Commercial & residential cooling systems by certified experts.">
+  <meta name="keywords" content="HVAC Ghana, air conditioning Takoradi, AC installation Ghana, cooling systems, commercial HVAC, refrigeration, City Coolers Engineering">
+  <meta property="og:title" content="City Coolers Engineering — Takoradi's Premier HVAC Specialists">
+  <meta property="og:description" content="Expert HVAC services for homes and businesses in Takoradi, Ghana. Installation, repair, maintenance, and commercial cooling systems.">
+  <title>City Coolers Engineering — Takoradi's Premier HVAC Specialists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+       ============================================================ */
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f7f7f5;
+      --bg-card: #fbfbfa;
+      --surface: #f1f1ef;
+      --border: #e8e8e5;
+      --border-strong: #d3d3cf;
+      --text: #1a1a18;
+      --text-secondary: #6b6b67;
+      --text-muted: #9b9b97;
+    --accent: #0057b8;
+--accent-soft: #e6eef8;
+--accent-hover: #003d82;
+--warm: #FFD700;
+--warm-soft: #fffae6;
+--cool: #0099cc;
+--cool-soft: #e0f5ff;
+--success: #00a672;
+--navy: #001e4d;
+--yellow: #FFD700;
+--yellow-hover: #e6c200;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --radius-sm: 6px;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-xl: 0 32px 64px rgba(0,0,0,0.14);
+      --nav-height: 60px;
+      --max-w: 1140px;
+      --transition: 0.2s ease;
+      /* Responsive spacing scale */
+      --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+      --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+      --space-md: clamp(1rem, 2.5vw, 1.5rem);
+      --space-lg: clamp(1.5rem, 4vw, 2.5rem);
+      --space-xl: clamp(2rem, 6vw, 4rem);
+      --space-2xl: clamp(3rem, 8vw, 6rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, textarea, select { font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-md); }
+    .section { padding: var(--space-2xl) 0; }
+    .section-sm { padding: var(--space-xl) 0; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: clamp(0.6875rem, 1.5vw, 0.75rem); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 4px 10px; border-radius: 20px;
+    }
+    .tag-warm { color: var(--warm); background: var(--warm-soft); }
+    .tag-cool { color: var(--cool); background: var(--cool-soft); }
+    .section-header { margin-bottom: var(--space-xl); }
+    .section-header .tag { margin-bottom: var(--space-sm); }
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: var(--space-sm);
+    }
+    .section-header p {
+      font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .divider { height: 1px; background: var(--border); margin: 0; }
+    .text-center { text-align: center; }
+    .text-center .section-header p { margin: 0 auto; }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: clamp(0.5rem, 1.5vw, 0.625rem) clamp(0.875rem, 2vw, 1rem);
+      font-size: clamp(0.8125rem, 1.5vw, 0.875rem); font-weight: 500;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+      white-space: nowrap;
+      min-height: 44px; /* touch target */
+    }
+    .btn-ghost { color: var(--text-secondary); }
+    .btn-ghost:hover { color: var(--text); background: var(--surface); }
+    .btn-primary {
+      background: var(--text); color: white;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+    .btn-primary:hover { background: #2d2d2a; transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn-accent {
+      background: var(--accent); color: white;
+      box-shadow: 0 1px 2px rgba(15,111,255,0.2);
+    }
+    .btn-accent:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-warm { background: var(--yellow); color: #001e4d; font-weight: 600; }
+.btn-warm:hover { background: var(--yellow-hover); }
+.btn-yellow { background: var(--yellow); color: var(--navy); font-weight: 700; box-shadow: 0 2px 8px rgba(255,215,0,0.3); }
+.btn-yellow:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .btn-outline {
+      border: 1px solid var(--border-strong); color: var(--text);
+      background: white;
+    }
+    .btn-outline:hover { background: var(--surface); border-color: var(--text); }
+    .btn-lg { padding: clamp(0.625rem, 2vw, 0.75rem) clamp(1.25rem, 3vw, 1.5rem); font-size: clamp(0.875rem, 1.5vw, 0.9375rem); border-radius: var(--radius); }
+    .btn-xl { padding: clamp(0.75rem, 2vw, 0.9375rem) clamp(1.5rem, 3.5vw, 2rem); font-size: clamp(0.9375rem, 1.5vw, 1rem); border-radius: var(--radius); }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-height);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--transition);
+    }
+    #nav.scrolled { box-shadow: var(--shadow-sm); }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto; padding: 0 var(--space-md);
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+    .nav-logo-icon {
+  width: 32px; height: 32px;
+  background: var(--accent);
+  border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 18px; height: 18px; fill: white; }
+    .nav-links {
+      display: none; /* hidden on mobile, shown on desktop */
+      align-items: center; gap: 2px;
+    }
+    .nav-links a {
+      padding: 6px 12px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .nav-actions .btn-ghost { display: none; } /* hide phone on small screens */
+    .hamburger { display: flex; flex-direction: column; gap: 5px; padding: 6px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all var(--transition); }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed; top: var(--nav-height); left: 0; right: 0;
+      background: white; border-bottom: 1px solid var(--border);
+      z-index: 999; padding: var(--space-sm) var(--space-md) var(--space-md);
+      flex-direction: column; gap: 4px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 12px 12px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+    }
+    .mobile-nav a:hover { color: var(--text); background: var(--surface); }
+    .mobile-nav .mobile-cta { margin-top: var(--space-sm); }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    #hero {
+      padding-top: calc(var(--nav-height) + var(--space-xl));
+      padding-bottom: var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.5;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+    }
+
+.hero-accent-bar {
+  display: inline-block;
+  width: 52px; height: 4px;
+  background: var(--yellow);
+  border-radius: 2px;
+  margin-bottom: var(--space-md);
+}
+
+    .hero-inner { position: relative; z-index: 1; max-width: 860px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 12px 5px 6px;
+      background: white; border: 1px solid var(--border);
+      border-radius: 20px; margin-bottom: var(--space-lg);
+      font-size: clamp(0.75rem, 1.5vw, 0.8125rem); font-weight: 500; color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--success);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-badge-dot::after { content: ''; width: 8px; height: 8px; background: white; border-radius: 50%; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: var(--space-md);
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: var(--space-lg);
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      width: 100%;
+      background: white;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-stat {
+      padding: var(--space-md);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-stat:nth-child(2n) { border-right: none; }
+    .hero-stat:nth-child(n+3) { border-bottom: none; }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 1.875rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-stat-label {
+      font-size: clamp(0.6875rem, 1.5vw, 0.8125rem);
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ============================================================
+       MARQUEE / TRUST BAR
+       ============================================================ */
+    .trust-bar {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-sm) 0;
+      overflow: hidden;
+    }
+    .trust-bar-inner {
+      display: flex; gap: clamp(1rem, 3vw, 3rem); align-items: center;
+      animation: marquee 30s linear infinite;
+      width: max-content;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: clamp(0.6875rem, 1.5vw, 0.8125rem); font-weight: 500; color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .trust-item svg { width: 16px; height: 16px; opacity: 0.5; flex-shrink: 0; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ============================================================
+       SERVICES
+       ============================================================ */
+    #services { background: var(--bg-soft); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .service-card {
+      background: white;
+      padding: var(--space-lg);
+      transition: background var(--transition);
+      cursor: default;
+    }
+    .service-card:hover { background: var(--accent-soft); }
+    .service-card:hover .service-icon { background: var(--accent); color: white; }
+    .service-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius);
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--space-md);
+      font-size: 1.375rem;
+      transition: all var(--transition);
+      color: var(--text-secondary);
+    }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-card:hover .service-icon svg { stroke: white; }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+      letter-spacing: -0.01em;
+    }
+    .service-card p {
+      font-size: clamp(0.8125rem, 1.5vw, 0.875rem);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: var(--space-md);
+    }
+    .service-card-link {
+      font-size: 0.8125rem; font-weight: 500;
+      color: var(--accent);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .service-card-link::after { content: '→'; transition: transform var(--transition); }
+    .service-card:hover .service-card-link::after { transform: translateX(4px); }
+
+    /* ============================================================
+       PROCESS / HOW IT WORKS
+       ============================================================ */
+    #process { background: white; }
+    .process-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .process-step {
+      padding: var(--space-lg);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .process-num {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem); font-weight: 700;
+      color: var(--border-strong);
+      line-height: 1;
+      margin-bottom: var(--space-md);
+      letter-spacing: -0.03em;
+    }
+    .process-step h3 { font-size: clamp(0.9375rem, 1.5vw, 1rem); font-weight: 600; margin-bottom: var(--space-xs); }
+    .process-step p { font-size: clamp(0.8125rem, 1.5vw, 0.875rem); color: var(--text-secondary); line-height: 1.65; }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    #about { background: var(--bg-soft); }
+    .about-layout {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--space-xl); align-items: center;
+    }
+    .about-visual { position: relative; }
+    .about-img-stack { position: relative; height: 300px; }
+    .about-img-main, .about-img-card { border-radius: var(--radius-xl); overflow: hidden; }
+    .about-img-main {
+      width: 85%; height: 260px;
+      background: linear-gradient(135deg, #1a2744 0%, #0f6fff 60%, #00bfae 100%);
+      position: relative;
+    }
+    .about-img-main-inner {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      color: white; gap: var(--space-sm);
+    }
+    .about-img-main-inner svg { width: clamp(40px, 8vw, 64px); height: clamp(40px, 8vw, 64px); opacity: 0.9; }
+    .about-img-main-inner span {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 600;
+      opacity: 0.9;
+    }
+    .about-img-card {
+      position: absolute; bottom: 0; right: 0;
+      width: clamp(140px, 25vw, 200px);
+      background: white;
+      border: 1px solid var(--border);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-img-card-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .about-img-card-label { font-size: clamp(0.6875rem, 1.2vw, 0.8125rem); color: var(--text-secondary); margin-top: 4px; }
+    .about-content .tag { margin-bottom: var(--space-md); }
+    .about-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-md);
+    }
+    .about-content p { font-size: clamp(0.9375rem, 1.5vw, 1rem); color: var(--text-secondary); line-height: 1.75; margin-bottom: var(--space-sm); }
+    .about-certs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-lg); }
+    .cert-badge {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      background: white; border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.8125rem; font-weight: 500;
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+    .cert-badge svg { width: 14px; height: 14px; color: var(--success); }
+
+    /* ============================================================
+       WHY CHOOSE US
+       ============================================================ */
+    #why { background: white; }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .why-card {
+      padding: var(--space-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+    }
+    .why-card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); transform: translateY(-2px); }
+    .why-card-icon { margin-bottom: var(--space-sm); }
+    .why-card-icon svg { width: 28px; height: 28px; color: var(--accent); }
+    .why-card h3 { font-size: clamp(0.9375rem, 1.5vw, 1rem); font-weight: 600; margin-bottom: var(--space-xs); }
+    .why-card p { font-size: clamp(0.8125rem, 1.5vw, 0.875rem); color: var(--text-secondary); line-height: 1.65; }
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    #testimonials { background: var(--bg-soft); }
+    .testimonials-track { overflow: hidden; position: relative; }
+    .testimonials-inner {
+      display: flex; gap: var(--space-md);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .testimonial-card {
+      flex: 0 0 100%;
+      padding: var(--space-lg);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .testimonial-stars { color: #f59e0b; font-size: 0.875rem; margin-bottom: var(--space-sm); letter-spacing: 2px; }
+    .testimonial-text {
+      font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+      font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 0.875rem; color: white;
+      flex-shrink: 0;
+    }
+    .testimonial-name { font-size: 0.875rem; font-weight: 600; }
+    .testimonial-loc { font-size: 0.75rem; color: var(--text-muted); }
+    .testimonials-controls { display: flex; gap: 8px; margin-top: var(--space-lg); }
+    .t-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .t-btn:hover { background: var(--surface); border-color: var(--border-strong); }
+
+    /* ============================================================
+       PRICING
+       ============================================================ */
+    #pricing { background: white; }
+    .pricing-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--space-md); align-items: start;
+      max-width: 440px; margin: 0 auto;
+    }
+    .pricing-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: white;
+      transition: all var(--transition);
+    }
+    .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .pricing-card.featured { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .pricing-header { padding: var(--space-lg) var(--space-md) var(--space-md); border-bottom: 1px solid var(--border); }
+    .pricing-card.featured .pricing-header { background: var(--accent-soft); }
+    .pricing-badge {
+      font-size: 0.75rem; font-weight: 600;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 3px 8px; border-radius: 20px;
+      margin-bottom: var(--space-sm); display: inline-block;
+    }
+    .pricing-name { font-family: var(--font-display); font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; }
+    .pricing-price { font-family: var(--font-display); font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+    .pricing-price span { font-size: 1rem; font-weight: 400; color: var(--text-muted); }
+    .pricing-desc { font-size: 0.875rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5; }
+    .pricing-body { padding: var(--space-md) var(--space-md) var(--space-lg); }
+    .pricing-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: var(--space-lg); }
+    .pricing-feature { display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); }
+    .pricing-feature::before {
+      content: ''; display: inline-block; width: 16px; height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300a672' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: contain; flex-shrink: 0; margin-top: 2px;
+    }
+    .pricing-feature.no::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239b9b97' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E"); }
+    .pricing-feature.no { color: var(--text-muted); }
+
+    /* ============================================================
+       GALLERY
+       ============================================================ */
+    #gallery { background: var(--bg-soft); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all var(--transition);
+      background: white;
+    }
+    .gallery-item:hover { box-shadow: var(--shadow-lg); transform: scale(1.02); }
+   .gallery-item-visual { height: 220px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #001e4d; }
+.gallery-item-visual video { width: 100%; height: 100%; object-fit: cover; }
+.gallery-item-visual.video-tall { height: 280px; }
+    .gallery-item-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-item-info { padding: var(--space-sm) var(--space-md); }
+    .gallery-item-title { font-size: 0.875rem; font-weight: 600; margin-bottom: 4px; }
+    .gallery-item-sub { font-size: 0.8125rem; color: var(--text-muted); }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    #faq { background: white; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%; text-align: left;
+      padding: var(--space-md) var(--space-md);
+      display: flex; justify-content: space-between; align-items: center;
+      gap: var(--space-sm);
+      font-size: clamp(0.875rem, 1.5vw, 0.9375rem); font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      transition: background var(--transition);
+      background: white;
+      min-height: 44px;
+    }
+    .faq-question:hover { background: var(--bg-soft); }
+    .faq-question.open { background: var(--accent-soft); color: var(--accent); }
+    .faq-icon {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; flex-shrink: 0;
+      transition: all var(--transition); font-weight: 600;
+    }
+    .faq-question.open .faq-icon { background: var(--accent); color: white; transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 var(--space-md) var(--space-md);
+      font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      background: var(--accent-soft);
+    }
+    .faq-answer.open { display: block; }
+
+    /* ============================================================
+       BOOKING
+       ============================================================ */
+    #booking { background: var(--bg-soft); }
+    .booking-layout {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--space-xl); align-items: start;
+    }
+    .booking-info h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-sm);
+    }
+    .booking-info p { font-size: clamp(0.9375rem, 1.5vw, 1rem); color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-lg); }
+    .booking-contact-items { display: flex; flex-direction: column; gap: var(--space-sm); }
+    .booking-contact-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: var(--space-sm) var(--space-md);
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .booking-contact-item-icon {
+      width: 36px; height: 36px; border-radius: var(--radius-sm);
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--text-secondary);
+    }
+    .booking-contact-item-icon svg { width: 18px; height: 18px; }
+    .booking-contact-item-text { font-size: 0.875rem; }
+    .booking-contact-item-label { color: var(--text-muted); font-size: 0.75rem; }
+    .booking-contact-item-val { font-weight: 500; }
+    .booking-form-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow);
+    }
+    .form-group { margin-bottom: var(--space-md); }
+    .form-group label { display: block; font-size: 0.8125rem; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+      color: var(--text);
+      background: white;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      min-height: 44px;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(15,111,255,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+    .form-success { display: none; text-align: center; padding: var(--space-lg); }
+    .form-success .success-icon { margin-bottom: var(--space-sm); display: flex; justify-content: center; }
+    .form-success .success-icon svg { width: 48px; height: 48px; color: var(--success); }
+    .form-success h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 8px; }
+    .form-success p { color: var(--text-secondary); font-size: 0.9375rem; }
+
+    /* ============================================================
+       EMERGENCY BANNER
+       ============================================================ */
+    .emergency-banner {
+      background: linear-gradient(135deg, #1a1a18 0%, #2d2d2a 100%);
+      color: white;
+      padding: var(--space-xl) 0;
+      text-align: center;
+    }
+    .emergency-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      letter-spacing: -0.02em;
+    }
+    .emergency-banner p { color: rgba(255,255,255,0.6); margin-bottom: var(--space-lg); font-size: clamp(0.9375rem, 1.5vw, 1rem); }
+    .emergency-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer { background: var(--text); color: rgba(255,255,255,0.7); padding: var(--space-2xl) 0 var(--space-xl); }
+    .footer-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: var(--space-xl); margin-bottom: var(--space-xl);
+    }
+    .footer-brand .nav-logo { color: white; margin-bottom: var(--space-sm); }
+    .footer-brand .nav-logo-icon { background: rgba(255,255,255,0.1); }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.65; max-width: 280px; }
+    .footer-col h4 { font-size: 0.8125rem; font-weight: 600; color: white; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: var(--space-sm); }
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.5); transition: color var(--transition); }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom {
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; flex-direction: column; align-items: flex-start;
+      flex-wrap: wrap; gap: var(--space-sm);
+    }
+    .footer-bottom p { font-size: 0.8125rem; }
+    .footer-links { display: flex; gap: var(--space-md); flex-wrap: wrap; }
+    .footer-links a { font-size: 0.8125rem; color: rgba(255,255,255,0.4); }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ============================================================
+       CHAT WIDGET
+       ============================================================ */
+    #chat-widget { position: fixed; bottom: 16px; right: 16px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+    .chat-toggle-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--text); color: white;
+      box-shadow: var(--shadow-xl);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .chat-toggle-btn:hover { transform: scale(1.05); background: #2d2d2a; }
+    .chat-toggle-btn svg { width: 22px; height: 22px; transition: all 0.25s; }
+    .chat-notif { position: absolute; top: -3px; right: -3px; width: 18px; height: 18px; background: var(--warm); color: white; border-radius: 50%; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid white; }
+    .chat-window {
+      width: calc(100vw - 32px); max-width: 380px; height: 70vh; max-height: 560px;
+      background: white; border: 1px solid var(--border); border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl); display: flex; flex-direction: column; overflow: hidden;
+      transform-origin: bottom right;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(0.9) translateY(10px); opacity: 0; pointer-events: none;
+    }
+    .chat-window.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+    .chat-header { padding: var(--space-sm) var(--space-md); background: var(--text); color: white; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .chat-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.125rem; flex-shrink: 0; }
+    .chat-header-info { flex: 1; }
+    .chat-header-name { font-weight: 600; font-size: 0.875rem; }
+    .chat-header-status { font-size: 0.75rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 4px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cool); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(0.85); } }
+    .chat-header-actions { display: flex; gap: 4px; }
+    .chat-header-btn { width: 28px; height: 28px; border-radius: 6px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; transition: background var(--transition); }
+    .chat-header-btn:hover { background: rgba(255,255,255,0.2); color: white; }
+    .chat-messages { flex: 1; overflow-y: auto; padding: var(--space-md); display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
+    .chat-messages::-webkit-scrollbar { width: 4px; }
+    .chat-messages::-webkit-scrollbar-track { background: transparent; }
+    .chat-messages::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+    .msg { display: flex; gap: 8px; align-items: flex-end; animation: msgIn 0.25s ease both; }
+    @keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .msg.user { flex-direction: row-reverse; }
+    .msg-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0; color: var(--text-secondary); }
+    .msg.bot .msg-avatar { background: var(--text); color: white; font-size: 0.875rem; }
+    .msg-bubble { max-width: 80%; padding: 10px 13px; border-radius: 14px; font-size: 0.875rem; line-height: 1.55; color: var(--text); }
+    .msg.bot .msg-bubble { background: var(--bg-soft); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+    .msg.user .msg-bubble { background: var(--text); color: white; border-bottom-right-radius: 4px; }
+    .msg-time { font-size: 0.6875rem; color: var(--text-muted); margin-top: 4px; text-align: right; }
+    .msg.bot .msg-time { text-align: left; }
+    .chat-suggestions { padding: 0 var(--space-md) var(--space-sm); display: flex; flex-wrap: wrap; gap: 6px; }
+    .suggestion-btn { padding: 6px 12px; background: white; border: 1px solid var(--border); border-radius: 20px; font-size: 0.8125rem; color: var(--accent); font-weight: 500; cursor: pointer; transition: all var(--transition); white-space: nowrap; }
+    .suggestion-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
+    .chat-input-area { padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+    #chatInput { flex: 1; border: 1px solid var(--border); border-radius: 10px; padding: 9px 13px; font-size: 0.875rem; outline: none; resize: none; font-family: var(--font-body); max-height: 120px; line-height: 1.5; transition: border-color var(--transition); }
+    #chatInput:focus { border-color: var(--accent); }
+    #chatSend { width: 36px; height: 36px; border-radius: 8px; background: var(--text); color: white; display: flex; align-items: center; justify-content: center; transition: all var(--transition); flex-shrink: 0; }
+    #chatSend:hover { background: #2d2d2a; }
+    #chatSend svg { width: 16px; height: 16px; }
+    .typing-indicator { display: flex; align-items: center; gap: 4px; padding: 10px 13px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 14px; border-bottom-left-radius: 4px; width: fit-content; }
+    .typing-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted); animation: typingPulse 1.2s ease-in-out infinite; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingPulse { 0%, 100% { opacity: 0.3; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.1); } }
+
+    /* ============================================================
+       COST ESTIMATOR
+       ============================================================ */
+    #estimator { background: white; }
+    .estimator-card { max-width: 700px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .estimator-header { background: var(--text); color: white; padding: var(--space-lg) var(--space-md); }
+    .estimator-header h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 6px; }
+    .estimator-header p { color: rgba(255,255,255,0.6); font-size: 0.875rem; }
+    .estimator-body { padding: var(--space-lg); }
+    .estimator-step { display: none; }
+    .estimator-step.active { display: block; }
+    .estimator-step h4 { font-size: 1rem; font-weight: 600; margin-bottom: var(--space-sm); }
+    .estimator-options { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: var(--space-lg); }
+    .est-option {
+      padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius);
+      cursor: pointer; transition: all var(--transition); text-align: left;
+      background: white; font-size: 0.875rem; font-weight: 500;
+      display: flex; align-items: center; gap: 8px; min-height: 44px;
+    }
+    .est-option svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--text-muted); }
+    .est-option:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .est-option.selected { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+    .est-option.selected svg { color: var(--accent); }
+    .estimator-result { padding: var(--space-md); background: var(--accent-soft); border: 1px solid rgba(15,111,255,0.2); border-radius: var(--radius-lg); text-align: center; }
+    .estimator-result-price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; }
+    .estimator-result-label { font-size: 0.875rem; color: var(--text-secondary); margin-top: 6px; }
+    .estimator-result-note { font-size: 0.8125rem; color: var(--text-muted); margin-top: 8px; }
+    .estimator-footer { padding: 0 var(--space-lg) var(--space-lg); display: flex; flex-direction: column; gap: 10px; }
+
+    /* ============================================================
+       SCROLL ANIMATIONS
+       ============================================================ */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+
+
+/* ============================================================
+   VIDEO SHOWCASE
+   ============================================================ */
+#videos { background: var(--navy); }
+#videos .section-header h2 { color: white; }
+#videos .section-header p { color: rgba(255,255,255,0.65); }
+#videos .tag { background: rgba(255,215,0,0.15); color: var(--yellow); }
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+.video-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all var(--transition);
+}
+.video-card:hover { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(255,215,0,0.2); transform: translateY(-3px); }
+.video-card video {
+  width: 100%; display: block;
+  background: #000;
+  max-height: 340px;
+  object-fit: cover;
+}
+.video-card-info {
+  padding: var(--space-md);
+}
+.video-card-info h4 {
+  font-family: var(--font-display);
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  font-weight: 600; color: white;
+  margin-bottom: 6px;
+}
+.video-card-info p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+.video-card-tag {
+  display: inline-flex; align-items: center;
+  margin-top: 10px;
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--yellow);
+  background: rgba(255,215,0,0.12);
+  padding: 3px 10px; border-radius: 20px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .video-grid { grid-template-columns: repeat(3, 1fr); }
+  .video-card.featured { grid-column: span 2; }
+  .video-card.featured video { max-height: 420px; }
+}
+
+/* ============================================================
+   STATS BAND
+   ============================================================ */
+.stats-band {
+  background: var(--accent);
+  padding: var(--space-xl) 0;
+}
+.stats-band-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.stat-cell {
+  background: var(--accent);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+.stat-cell-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-cell-label {
+  font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
+  color: rgba(255,255,255,0.8);
+  font-weight: 400;
+}
+@media (min-width: 600px) {
+  .stats-band-inner { grid-template-columns: repeat(4, 1fr); }
+}
+
+
+    /* ============================================================
+       RESPONSIVE BREAKPOINTS
+       ============================================================ */
+    /* Small tablets (≥481px) */
+    @media (min-width: 481px) {
+      .hero-stats { grid-template-columns: repeat(4, 1fr); }
+      .hero-stat { border-bottom: none; }
+      .hero-stat:nth-child(2n) { border-right: 1px solid var(--border); }
+      .hero-stat:last-child { border-right: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-step { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .process-step:nth-child(2n) { border-right: none; }
+      .process-step:nth-child(n+3) { border-bottom: none; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonial-card { flex: 0 0 calc(50% - 10px); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr 1fr; }
+      .estimator-options { grid-template-columns: repeat(2, 1fr); }
+      .estimator-footer { flex-direction: row; }
+      .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+    }
+
+    /* Large tablets / small laptops (≥769px) */
+    @media (min-width: 769px) {
+      .nav-links { display: flex; }
+      .nav-actions .btn-ghost { display: inline-flex; }
+      .hamburger { display: none; }
+      .about-layout { grid-template-columns: 1fr 1fr; }
+      .about-img-stack { height: 480px; }
+      .about-img-main { height: 380px; }
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .process-grid { grid-template-columns: repeat(4, 1fr); }
+      .process-step { border-right: 1px solid var(--border); border-bottom: none; }
+      .process-step:last-child { border-right: none; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); max-width: none; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .booking-layout { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+      .hero-stats { width: fit-content; }
+    }
+
+    /* Desktop & large screens (≥1025px) */
+    @media (min-width: 1025px) {
+      .container { padding: 0 24px; }
+      .section { padding: 96px 0; }
+      .section-sm { padding: 64px 0; }
+      .testimonial-card { flex: 0 0 calc(33.333% - 14px); }
+    }
+  </style>
+</head>
+<body>
+    
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M17 8C8 10 5.9 16.17 3.82 19.5c1.83-2 4.74-2.67 7.37-1.67C13 19 14.67 21 17 21c2.67 0 5-2.33 5-5 0-2.5-1.83-4.5-5-8zm0 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+      </div>
+      City Coolers
+    </a>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#videos">Our Work</a>
+      <a href="#pricing">Plans</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#booking">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:+233546999753" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        054 699 9753
+      </a>
+      <a href="https://wa.me/233546999753" target="_blank" class="btn btn-ghost" style="color:#25D366;display:flex;align-items:center;gap:6px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#booking" class="btn btn-yellow">Get a Quote</a>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero" onclick="toggleMobileNav()">Home</a>
+  <a href="#services" onclick="toggleMobileNav()">Services</a>
+  <a href="#about" onclick="toggleMobileNav()">About Us</a>
+  <a href="#videos" onclick="toggleMobileNav()">Our Work</a>
+  <a href="#pricing" onclick="toggleMobileNav()">Maintenance Plans</a>
+  <a href="#testimonials" onclick="toggleMobileNav()">Reviews</a>
+  <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
+  <a href="#booking" onclick="toggleMobileNav()">Contact</a>
+  <a href="#booking" class="btn btn-yellow btn-lg mobile-cta" onclick="toggleMobileNav()">Get a Free Quote</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>Available in Takoradi & across the Western Region</span>
+      </div>
+      <div class="hero-accent-bar"></div>
+      <h1>Ghana's Climate,<br><em>expertly controlled.</em></h1>
+      <p class="hero-sub">
+        City Coolers Engineering delivers precision HVAC installation, maintenance, and repair for homes and businesses across Takoradi and the Western Region. Certified engineers, transparent pricing, guaranteed results.
+      </p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-yellow btn-xl">Get a Free Quote →</a>
+        <a href="#videos" class="btn btn-outline btn-xl">See Our Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Projects completed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">12 yrs</div>
+          <div class="hero-stat-label">In business</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.9★</div>
+          <div class="hero-stat-label">Customer rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">24hr</div>
+          <div class="hero-stat-label">Emergency response</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+ 
+<div class="trust-bar">
+  <div class="trust-bar-inner" id="trustBar">
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Certified HVAC Engineers</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg> Residential &amp; Commercial</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Fully Licensed &amp; Insured</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Same-Day Service Available</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> All Major Brands Serviced</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> Transparent Pricing</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 2-Year Workmanship Warranty</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Flexible Payment Plans</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> 24/7 Emergency Line</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Energy-Efficient Installations</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Certified HVAC Engineers</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg> Residential &amp; Commercial</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Fully Licensed &amp; Insured</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Same-Day Service Available</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> All Major Brands Serviced</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> Transparent Pricing</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 2-Year Workmanship Warranty</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Flexible Payment Plans</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> 24/7 Emergency Line</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Energy-Efficient Installations</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">Our Services</div>
+      <h2>Complete HVAC solutions for Ghana</h2>
+      <p>From single-room units to full commercial cooling systems — City Coolers Engineering handles every aspect with precision, speed, and accountability.</p>
+    </div>
+    <div class="services-grid fade-in">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7 7-7z"/></svg></div>
+        <h3>AC Installation</h3>
+        <p>Professional split, cassette, floor-standing, and central AC system installation. We size, design, and fit systems for Ghana's tropical climate — ensuring optimal performance year-round.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <h3>AC Repair &amp; Diagnostics</h3>
+        <p>Fast fault-finding and repair for all brands — Daikin, LG, Samsung, Carrier, Gree, Midea, and more. Refrigerant recharges, PCB faults, compressor issues, and remote faults fixed right the first time.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <h3>Commercial HVAC Systems</h3>
+        <p>Design and installation of large-scale commercial cooling for offices, shopping malls, hotels, hospitals, warehouses, and industrial facilities across the Western Region.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-4H6a2 2 0 00-2 2z"/><path d="M14 2v6h6"/></svg></div>
+        <h3>Ventilation &amp; Air Quality</h3>
+        <p>Duct design, duct cleaning, fresh air supply systems, and exhaust ventilation for kitchens and server rooms. Improved indoor air quality for healthier, more productive spaces.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Preventive Maintenance</h3>
+        <p>Scheduled maintenance contracts that extend equipment lifespan, maintain peak efficiency, and eliminate costly surprise breakdowns — particularly important in Ghana's humid coastal climate.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Cold Room &amp; Refrigeration</h3>
+        <p>Cold room construction and refrigeration system installation for food storage, pharmaceuticals, and hospitality businesses. Full compliance with food safety and health standards.</p>
+        <span class="service-card-link">Learn more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+
+<section class="section-sm" id="process">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">How It Works</div>
+      <h2>Simple from first call to final handover</h2>
+    </div>
+    <div class="process-grid fade-in">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Call or WhatsApp Us</h3>
+        <p>Reach out via phone, WhatsApp, or our booking form. Tell us what you need — we'll respond within the hour.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Site Survey &amp; Quote</h3>
+        <p>Our engineer visits your location, assesses your space, and provides a detailed, itemised quote. No hidden charges.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Professional Installation</h3>
+        <p>Our certified team arrives on time with the right equipment. Work is completed cleanly, safely, and to the highest standard.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h3>Handover &amp; Warranty</h3>
+        <p>We walk you through your new system, register your warranty, and provide ongoing support. Your comfort is our commitment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-band-inner">
+      <div class="stat-cell">
+        <div class="stat-cell-num">500+</div>
+        <div class="stat-cell-label">Installations completed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num">12+</div>
+        <div class="stat-cell-label">Years in operation</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num">98%</div>
+        <div class="stat-cell-label">Client satisfaction rate</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num">24hr</div>
+        <div class="stat-cell-label">Emergency response</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-visual fade-in">
+        <div class="about-img-stack">
+          <div class="about-img-main">
+            <div class="about-img-main-inner">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" stroke="white" stroke-width="2" opacity="0.3"/>
+                <path d="M32 10C20 10 12 20 12 32C12 44 20 54 32 54C44 54 52 44 52 32C52 20 44 10 32 10Z" fill="rgba(255,255,255,0.1)"/>
+                <path d="M32 18L36 28H46L38 34L41 44L32 38L23 44L26 34L18 28H28L32 18Z" fill="white" opacity="0.9"/>
+              </svg>
+              <span>12 Years of Excellence in Takoradi</span>
+            </div>
+          </div>
+          <div class="about-img-card">
+            <div class="about-img-card-num">4.9/5</div>
+            <div class="about-img-card-label">Average rating from 300+ client reviews across Ghana</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content fade-in fade-in-delay-1">
+        <div class="tag">About City Coolers</div>
+        <h2>Built on trust, engineered for Ghana's climate</h2>
+        <p>City Coolers Engineering was founded in Takoradi with a clear mission: deliver world-class HVAC solutions tailored specifically to Ghana's tropical climate — where reliable cooling is not a luxury, it's a necessity.</p>
+        <p>With over 12 years of field experience, our team of certified HVAC engineers has completed more than 500 installations across residential homes, corporate offices, hotels, hospitals, and industrial facilities throughout the Western Region and beyond.</p>
+        <p>We are authorised installers and service partners for leading brands including Daikin, LG, Carrier, Gree, and Samsung. Every project is backed by our 2-year workmanship warranty and long-term maintenance support.</p>
+        <div class="about-certs">
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Certified HVAC Engineers</span>
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Daikin Authorised Partner</span>
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> LG Certified Installer</span>
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Ghana Standards Compliant</span>
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 2-Year Workmanship Warranty</span>
+          <span class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fully Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHY CHOOSE US
+     ============================================================ -->
+
+     
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">Why City Coolers</div>
+      <h2>The standard others are measured against</h2>
+      <p>We don't just install air conditioners — we engineer comfort. Every project is delivered with precision, accountability, and genuine care for the long-term.</p>
+    </div>
+    <div class="why-grid fade-in">
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Same-Day &amp; Emergency Service</h3>
+        <p>Equipment failures don't follow business hours. Our on-call engineers respond to emergencies across Takoradi within hours — keeping your home or business cool when it matters most.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Upfront, Itemised Pricing</h3>
+        <p>We provide fully detailed quotes before any work begins. No surprise additions, no inflated bills. What we quote is exactly what you pay — guaranteed in writing on every project.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-7 10 7-10 7z"/><path d="M6 12v5a2 2 0 002 2h8a2 2 0 002-2v-5"/></svg></div>
+        <h3>Certified Engineers Only</h3>
+        <p>Every technician on our team holds current HVAC certification. We invest continuously in training so our engineers stay ahead of new technologies and best practices in the industry.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>2-Year Workmanship Warranty</h3>
+        <p>All our installations are backed by a 2-year workmanship warranty. We also register all manufacturer warranties on your behalf and manage any claims that arise post-installation.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3>Climate-Optimised Solutions</h3>
+        <p>Ghana's humid, tropical climate demands more from HVAC systems than most. We select and configure equipment specifically for Takoradi's conditions — maximising efficiency and lifespan.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3>Clear Communication Always</h3>
+        <p>We keep you informed at every stage — before, during, and after the job. WhatsApp updates, arrival notifications, digital receipts, and post-installation follow-ups included on every project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+
+
+     
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-header fade-in" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+      <div>
+        <div class="tag">Testimonials</div>
+        <h2>What our clients say</h2>
+      </div>
+      <div class="testimonials-controls">
+        <button class="t-btn" onclick="moveTestimonials(-1)">←</button>
+        <button class="t-btn" onclick="moveTestimonials(1)">→</button>
+      </div>
+    </div>
+    <div class="testimonials-track fade-in">
+      <div class="testimonials-inner" id="testimonialsInner">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"City Coolers installed a full cassette AC system across our entire office floor. The team was professional, arrived exactly on time, and finished ahead of schedule. The difference in our team's productivity in this heat is remarkable."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#0057b8;">KA</div>
+            <div><div class="testimonial-name">Kwame Asante</div><div class="testimonial-loc">Office Manager · Takoradi Business Centre</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Our cold room at the restaurant broke down on a Friday evening. I called City Coolers and by Saturday morning an engineer was on-site. They saved thousands of cedis worth of stock. Absolutely dependable."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#00bfae;">AB</div>
+            <div><div class="testimonial-name">Abena Boateng</div><div class="testimonial-loc">Restaurant Owner · Sekondi-Takoradi</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"We've used City Coolers for our hotel's HVAC maintenance contract for three years. They're thorough, proactive, and always flag issues before they become problems. Excellent value and outstanding service."</div>
+          <div class="testimonial-avatar" style="background:#FFD700; color:#001e4d;">EO</div>
+          <div><div class="testimonial-name">Emmanuel Ofori</div><div class="testimonial-loc">Facilities Manager · Western Sands Hotel</div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"I had three quotes for my home. City Coolers gave me the most detailed survey, the clearest explanation of what I actually needed, and installed it perfectly. A year on — no issues at all. Highly recommended."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#7c3aed;">MA</div>
+            <div><div class="testimonial-name">Mary Aidoo</div><div class="testimonial-loc">Homeowner · Effia, Takoradi</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"The team installed a full ventilation system for our pharmaceutical storage facility. They understood the temperature sensitivity requirements immediately and delivered a compliant, well-documented solution. Truly professional engineers."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#059669;">FK</div>
+            <div><div class="testimonial-name">Francis Koomson</div><div class="testimonial-loc">Operations Director · MedStore Ghana</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"After two other contractors failed to fix our system, City Coolers diagnosed the fault in under 30 minutes. The repair was clean, the price was fair, and they followed up a week later to check everything was working. Genuine professionals."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#dc2626;">SB</div>
+            <div><div class="testimonial-name">Selasi Bonney</div><div class="testimonial-loc">Homeowner · Takoradi Harbour Area</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VIDEO SHOWCASE
+     ============================================================ -->
+<section class="section" id="videos">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">Our Work</div>
+      <h2>See City Coolers in action</h2>
+      <p>Real projects. Real installs. Real results. Browse our portfolio of completed HVAC works across Takoradi and the Western Region.</p>
+    </div>
+    <div class="video-grid fade-in">
+
+      <!-- VIDEO CARD 1 — Featured (spans 2 cols on desktop) -->
+      <div class="video-card featured">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>Commercial Office HVAC Installation</h4>
+          <p>Full cassette system installation across a 4-floor corporate office in Takoradi. Includes ductwork, zoning, and commissioning walkthrough.</p>
+          <span class="video-card-tag">Commercial</span>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD 2 -->
+      <div class="video-card">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>Residential Split AC Installation</h4>
+          <p>Full domestic split unit install — from wall mounting and refrigerant line routing to final commissioning and client handover.</p>
+          <span class="video-card-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD 3 -->
+      <div class="video-card">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>Cold Room Construction &amp; Commissioning</h4>
+          <p>Cold room build-out for a food storage facility. Insulated panel installation, refrigeration unit fitment, and temperature calibration.</p>
+          <span class="video-card-tag">Refrigeration</span>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD 4 -->
+      <div class="video-card">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>Hotel HVAC Maintenance Contract</h4>
+          <p>Annual preventive maintenance across a 60-room hotel — coil cleaning, refrigerant checks, filter replacement, and performance testing.</p>
+          <span class="video-card-tag">Maintenance</span>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD 5 -->
+      <div class="video-card">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video5.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>Industrial Ventilation System</h4>
+          <p>Supply and extract ventilation design and installation for a pharmaceutical storage warehouse — full compliance with health regulations.</p>
+          <span class="video-card-tag">Industrial</span>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD 6 -->
+      <div class="video-card">
+        <video controls preload="none" poster="" loading="lazy">
+          <source src="assets/video6.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-card-info">
+          <h4>AC Fault Diagnosis &amp; Repair</h4>
+          <p>Step-by-step fault diagnosis on a commercial unit — PCB replacement, refrigerant recharge, and performance validation on-site.</p>
+          <span class="video-card-tag">Repair</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Image Gallery Below Videos -->
+    <div style="margin-top: var(--space-xl);">
+      <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
+        <h3 style="font-family:var(--font-display);font-size:clamp(1.25rem,3vw,1.75rem);font-weight:600;color:white;">Project Photo Gallery</h3>
+      </div>
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/image1.jpeg" alt="City Coolers Engineering — Commercial AC installation project" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Commercial Office Install</div>
+            <div class="gallery-item-sub">Daikin Cassette · 4-Ton · Takoradi</div>
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/img2.jpg" alt="City Coolers Engineering — Residential AC project" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Residential Split Installation</div>
+            <div class="gallery-item-sub">LG Dual Inverter · 1.5 Ton · Effia</div>
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/img3.jpg" alt="City Coolers Engineering — Cold room project" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Cold Room Construction</div>
+            <div class="gallery-item-sub">Food Storage · Sekondi Market</div>
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/img4.jpg" alt="City Coolers Engineering — Hotel HVAC project" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Hotel HVAC System</div>
+            <div class="gallery-item-sub">60-Room Hotel · Western Sands</div>
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/img5.jpg" alt="City Coolers Engineering — Industrial ventilation" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Industrial Ventilation</div>
+            <div class="gallery-item-sub">Pharmaceutical Warehouse · Takoradi</div>
+          </div>
+        </div>
+        <div class="gallery-item" style="background:#001e4d; border-color:rgba(255,255,255,0.1);">
+          <div class="gallery-item-visual">
+            <img src="assets/img6.jpg" alt="City Coolers Engineering — Shopping mall HVAC" loading="lazy" onerror="this.parentNode.style.background='#0057b8';this.style.display='none'">
+          </div>
+          <div class="gallery-item-info" style="background:#001e4d;">
+            <div class="gallery-item-title" style="color:white;">Shopping Mall Cooling</div>
+            <div class="gallery-item-sub">Central System · 25-Ton · Takoradi Mall</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     COST ESTIMATOR
+     ============================================================ -->
+<section class="section-sm" id="estimator">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">Cost Estimator</div>
+      <h2>Get a ballpark estimate</h2>
+      <p>Answer a few quick questions and we'll give you a realistic cost range for your project.</p>
+    </div>
+    <div class="estimator-card fade-in">
+      <div class="estimator-header">
+        <h3>HVAC Cost Estimator</h3>
+        <p>Interactive estimate — no personal info required</p>
+      </div>
+      <div class="estimator-body">
+        <div class="estimator-step active" id="estStep1">
+          <h4>What service do you need?</h4>
+          <div class="estimator-options">
+            <button class="est-option" onclick="selectEstOption(this, 'service', 'repair')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg> AC/Heating Repair</button>
+            <button class="est-option" onclick="selectEstOption(this, 'service', 'install_ac')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7 7-7z"/></svg> New AC System</button>
+            <button class="est-option" onclick="selectEstOption(this, 'service', 'install_furnace')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.66 3.34A10 10 0 112 12a10 10 0 0115.66-8.66"/><path d="M13.41 7.05a4 4 0 110 5.9"/></svg> New Furnace/Heater</button>
+            <button class="est-option" onclick="selectEstOption(this, 'service', 'maintenance')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg> Maintenance Tune-up</button>
+          </div>
+          <button class="btn btn-primary" onclick="nextEstStep()" disabled id="estNext1">Next →</button>
+        </div>
+        <div class="estimator-step" id="estStep2">
+          <h4>What size is your home/space?</h4>
+          <div class="estimator-options">
+            <button class="est-option" onclick="selectEstOption(this, 'size', 'small')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Under 1,000 sq ft</button>
+            <button class="est-option" onclick="selectEstOption(this, 'size', 'medium')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> 1,000–2,000 sq ft</button>
+            <button class="est-option" onclick="selectEstOption(this, 'size', 'large')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/></svg> 2,000–3,500 sq ft</button>
+            <button class="est-option" onclick="selectEstOption(this, 'size', 'xlarge')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/></svg> 3,500+ sq ft / Commercial</button>
+          </div>
+          <button class="btn btn-primary" onclick="nextEstStep()" disabled id="estNext2">Next →</button>
+        </div>
+        <div class="estimator-step" id="estStep3">
+          <h4>What tier of equipment do you prefer?</h4>
+          <div class="estimator-options">
+            <button class="est-option" onclick="selectEstOption(this, 'tier', 'good')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Good — Reliable & Budget-Friendly</button>
+            <button class="est-option" onclick="selectEstOption(this, 'tier', 'better')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Better — Efficiency & Comfort</button>
+            <button class="est-option" onclick="selectEstOption(this, 'tier', 'best')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg> Best — Premium, Smart, Max-Efficiency</button>
+            <button class="est-option" onclick="selectEstOption(this, 'tier', 'unsure')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Not Sure — Advise Me</button>
+          </div>
+          <button class="btn btn-primary" onclick="showEstResult()" disabled id="estNext3">Show My Estimate →</button>
+        </div>
+        <div class="estimator-step" id="estResult">
+          <div class="estimator-result" id="estimatorResultBox">
+            <div class="estimator-result-price" id="estPriceRange">$0–$0</div>
+            <div class="estimator-result-label">Estimated total investment range</div>
+            <div class="estimator-result-note" id="estNote">Includes equipment, labor, and standard installation materials.</div>
+          </div>
+          <div style="margin-top:20px;padding:16px;background:var(--bg-soft);border-radius:10px;">
+            <p id="estDetails" style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65;"></p>
+          </div>
+        </div>
+      </div>
+      <div class="estimator-footer">
+        <a href="#booking" class="btn btn-primary">Get Exact Quote →</a>
+        <button class="btn btn-outline" onclick="resetEstimator()">Start Over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICING PLANS
+     ============================================================ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+ <div class="tag">Maintenance Plans</div>
+<h2>Protect your investment in Ghana's climate</h2>
+<p>Our maintenance contracts keep your AC and commercial cooling systems performing at peak efficiency — preventing the costly breakdowns that Ghana's humidity and heat accelerate.</p>
+    </div>
+    <div class="pricing-grid fade-in">
+      <div class="pricing-card">
+        <div class="pricing-header">
+     <div class="pricing-name">Basic Care</div>
+<div class="pricing-price">GH₵ 800<span>/year</span></div>
+<div class="pricing-desc">For homeowners who want reliable protection at an accessible price point.</div>
+
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-features">
+            <div class="pricing-feature">1 annual tune-up visit</div>
+            <div class="pricing-feature">Filter inspection & replacement</div>
+            <div class="pricing-feature">Safety checks (CO, gas, electrical)</div>
+            <div class="pricing-feature">10% discount on repairs</div>
+            <div class="pricing-feature">Priority scheduling</div>
+            <div class="pricing-feature no">24/7 emergency priority line</div>
+            <div class="pricing-feature no">Free diagnostic on breakdowns</div>
+            <div class="pricing-feature no">Parts discount</div>
+          </div>
+          <a href="#booking" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-name">Comfort Shield</div>
+<div class="pricing-price">GH₵ 1,800<span>/year</span></div>
+<div class="pricing-desc">Complete protection for your entire HVAC system — inside and out.</div>
+
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-features">
+            <div class="pricing-feature">2 tune-up visits (spring & fall)</div>
+            <div class="pricing-feature">Filter replacements included</div>
+            <div class="pricing-feature">Full system safety inspection</div>
+            <div class="pricing-feature">15% discount on all repairs</div>
+            <div class="pricing-feature">Priority same-day scheduling</div>
+            <div class="pricing-feature">24/7 emergency priority line</div>
+            <div class="pricing-feature">Free diagnostic on breakdowns</div>
+            <div class="pricing-feature no">Parts cost coverage</div>
+          </div>
+          <a href="#booking" class="btn btn-accent" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+    <div class="pricing-name">Commercial Pro+</div>
+<div class="pricing-price">GH₵ 4,500<span>/year</span></div>
+<div class="pricing-desc">Enterprise-grade coverage for commercial and multi-unit properties.</div>
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-features">
+            <div class="pricing-feature">Unlimited tune-up visits</div>
+            <div class="pricing-feature">All filters & media included</div>
+            <div class="pricing-feature">Comprehensive system inspection</div>
+            <div class="pricing-feature">20% discount on all repairs</div>
+            <div class="pricing-feature">Emergency same-day response</div>
+            <div class="pricing-feature">Dedicated emergency hotline</div>
+            <div class="pricing-feature">Free diagnostics, always</div>
+            <div class="pricing-feature">Discounted parts coverage</div>
+          </div>
+          <a href="#booking" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="tag">FAQ</div>
+      <h2>Common questions</h2>
+      <p>Everything you need to know about our services. Still have questions? Ask our AI assistant.</p>
+    </div>
+   <div class="faq-list fade-in" style="max-width:780px;margin:0 auto;">
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>How often should I service my AC system in Ghana?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">In Ghana's hot, humid coastal climate, we strongly recommend servicing your AC every 3–4 months rather than the 6-month cycle typical in cooler countries. The combination of high humidity, dust, and continuous heavy usage accelerates filter clogging, coil fouling, and refrigerant issues. Regular servicing extends system life by 40–60% and keeps energy consumption optimal.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>What AC brands do you install and service?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">We install and service all major brands available in Ghana — including Daikin, LG, Samsung, Carrier, Gree, Midea, Haier, TCL, Hisense, and Panasonic. For new installations, we recommend Daikin or LG for their reliability in tropical climates and the availability of spare parts in Ghana. We'll always recommend what's genuinely best for your situation and budget.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>How much does AC installation cost in Takoradi?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">Installation costs depend on AC type, unit size, and the complexity of the installation (pipe run length, wall type, height). For a typical 1–1.5 ton residential split unit, total installed cost in Takoradi currently ranges from GH₵ 3,500–GH₵ 7,500 depending on the brand and specification. Commercial and cassette units are priced per survey. We provide free site surveys and fully itemised quotes with no obligation.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>Do you offer emergency HVAC service in Takoradi?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">Yes — we provide emergency response for critical system failures, particularly for commercial facilities, cold rooms, and server rooms where downtime causes significant losses. Call or WhatsApp us on 054 699 9753 and we'll dispatch the nearest available engineer. We aim to respond within 2–4 hours for emergencies across Takoradi and Sekondi.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>What warranty do you provide on your work?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">All installation work carries a 2-year workmanship warranty. This means if any installation fault develops within 2 years, we return and rectify it at no charge. Equipment manufacturer warranties (typically 1–5 years depending on brand) are handled separately. We register your warranty on your behalf and assist with any manufacturer warranty claims throughout the coverage period.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>Can you install AC in a building under construction?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">Absolutely — in fact, involving us during the construction phase is strongly recommended. We can pre-plan pipe routes, condenser unit positions, and electrical requirements before walls are finished, saving significant cost and improving the final aesthetic. We work closely with architects and project managers on new-build projects across the Western Region.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>Do you service areas outside Takoradi?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">Our primary service area covers Takoradi, Sekondi, Agona Nkwanta, Tarkwa, and the surrounding Western Region. For commercial and large-scale projects, we travel to other parts of Ghana including Accra, Kumasi, and Cape Coast. Contact us with your location and project details and we'll advise on coverage and any travel considerations.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      <span>Do you offer payment plans for large installations?</span>
+      <div class="faq-icon">+</div>
+    </button>
+    <div class="faq-answer">Yes. For large residential and commercial projects above GH₵ 5,000, we offer structured payment plans — typically a 50% deposit before work begins and the balance on completion. For ongoing maintenance contracts, monthly payment options are available. Speak to our team about what works best for your budget and we'll find a workable arrangement.</div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKING / CONTACT
+     ============================================================ -->
+<section class="section" id="booking">
+  <div class="container">
+    <div class="booking-layout">
+      <div class="booking-info fade-in">
+     <div class="tag">Get in Touch</div>
+<h2>Request a free site survey &amp; quote</h2>
+<p>Fill in the form and our team will get back to you within 2 hours during working hours. For urgent jobs or emergencies, call or WhatsApp us directly on 054 699 9753.</p>
+        <div class="booking-contact-items">
+          <div class="booking-contact-item">
+            <div class="booking-contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="booking-contact-item-text">
+              <div class="booking-contact-item-label">24/7 Phone</div>
+           <div class="booking-contact-item-val">054 699 9753</div>   
+            </div>
+          </div>
+          <div class="booking-contact-item">
+            <div class="booking-contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="booking-contact-item-text">
+              <div class="booking-contact-item-label">Email</div>
+            <div class="booking-contact-item-val">alexofori994@gmail.com</div> 
+            </div>
+          </div>
+          <div class="booking-contact-item">
+            <div class="booking-contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="booking-contact-item-text">
+              <div class="booking-contact-item-label">Service Area</div>
+           <div class="booking-contact-item-val">Takoradi, Sekondi &amp; Western Region</div>
+            </div>
+          </div>
+          <div class="booking-contact-item">
+            <div class="booking-contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="booking-contact-item-text">
+              <div class="booking-contact-item-label">Office Hours</div>
+              <div class="booking-contact-item-val">Mon–Sat 7am–8pm · 24/7 Emergency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="booking-form-card">
+          <div id="bookingForm">
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:24px;">Request a Free Quote</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="fName" placeholder="John">
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lName" placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="fEmail" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="fPhone" placeholder="(555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select id="fService">
+                <option value="">Select a service...</option>
+                <option>AC Repair</option>
+                <option>AC Installation</option>
+                <option>Heating Repair</option>
+                <option>Furnace/Heater Installation</option>
+                <option>Heat Pump Service</option>
+                <option>Preventive Maintenance</option>
+                <option>Air Quality / Filtration</option>
+                <option>Smart Thermostat Installation</option>
+                <option>Duct Cleaning</option>
+                <option>Emergency Service</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date" id="fDate">
+              </div>
+              <div class="form-group">
+                <label>Preferred Time</label>
+                <select id="fTime">
+                  <option>Morning (7–11am)</option>
+                  <option>Midday (11am–2pm)</option>
+                  <option>Afternoon (2–6pm)</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes (optional)</label>
+              <textarea id="fNotes" placeholder="Describe your issue or any details that might help our technician..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" onclick="submitBooking()">Submit Booking Request →</button>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h3>Booking Request Received!</h3>
+            <p>Thank you! We've received your request and will confirm your appointment within 30 minutes. Check your email for a confirmation.</p>
+            <div style="margin-top:20px;">
+              <a href="tel:+18005551234" class="btn btn-primary" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call to Expedite</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EMERGENCY BANNER
+     ============================================================ -->
+<div class="emergency-banner">
+  <div class="container">
+    <h2>HVAC emergency in Takoradi? We're on call right now.</h2>
+    <p>Our engineers are available 24 hours a day for critical system failures — cold rooms, commercial HVAC, and residential emergencies.</p>
+    <div class="emergency-actions">
+      <a href="tel:+233546999753" class="btn btn-warm btn-xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call 054 699 9753 Now
+      </a>
+      <a href="https://wa.me/233546999753" target="_blank" class="btn btn-xl" style="background:#25D366;color:white;display:inline-flex;align-items:center;gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us Now
+      </a>
+      <button class="btn btn-outline btn-xl" style="color:white;border-color:rgba(255,255,255,0.3);" onclick="openChat()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Chat with AI Assistant
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" style="color:white; margin-bottom: var(--space-sm); display:flex;">
+          <div class="nav-logo-icon" style="background:var(--accent);">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M17 8C8 10 5.9 16.17 3.82 19.5c1.83-2 4.74-2.67 7.37-1.67C13 19 14.67 21 17 21c2.67 0 5-2.33 5-5 0-2.5-1.83-4.5-5-8zm0 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          </div>
+          City Coolers Engineering
+        </a>
+        <p style="font-size:0.875rem; line-height:1.65; max-width:280px;">Premium HVAC services for homes and businesses across Takoradi and the Western Region. Engineered for Ghana's climate since 2012.</p>
+        <div style="margin-top: var(--space-md); display:flex; flex-direction:column; gap:8px;">
+          <a href="tel:+233546999753" style="color:var(--yellow); font-size:0.9375rem; font-weight:600;">📞 054 699 9753</a>
+          <a href="mailto:alexofori994@gmail.com" style="color:rgba(255,255,255,0.5); font-size:0.875rem;">alexofori994@gmail.com</a>
+          <span style="color:rgba(255,255,255,0.4); font-size:0.8125rem;">📍 Takoradi, Western Region, Ghana</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC Installation</a></li>
+          <li><a href="#services">AC Repair &amp; Diagnostics</a></li>
+          <li><a href="#services">Commercial HVAC</a></li>
+          <li><a href="#services">Ventilation Systems</a></li>
+          <li><a href="#services">Cold Rooms</a></li>
+          <li><a href="#services">Preventive Maintenance</a></li>
+          <li><a href="#services">Refrigeration</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#pricing">Maintenance Plans</a></li>
+          <li><a href="#videos">Our Work</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#booking">Request a Quote</a></li>
+          <li><a href="tel:+233546999753">Call: 054 699 9753</a></li>
+          <li><a href="https://wa.me/233546999753" target="_blank">WhatsApp Us</a></li>
+          <li><a href="mailto:alexofori994@gmail.com">Email Us</a></li>
+          <li><a href="#booking">Emergency Service</a></li>
+          <li><a href="#pricing">Maintenance Plans</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 City Coolers Engineering. All rights reserved. Takoradi, Ghana.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ============================================================
+     CHAT WIDGET
+     ============================================================ -->
+<div id="chat-widget">
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">City Coolers Assistant</div>
+        <div class="chat-header-status"><span class="status-dot"></span> Online · Typically replies instantly</div>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-header-btn" onclick="closeChat()" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-suggestions" id="chatSuggestions"></div>
+    <div class="chat-input-area">
+      <textarea id="chatInput" rows="1" placeholder="Ask about HVAC services, pricing, or book..." onkeydown="handleChatKey(event)" oninput="autoResizeInput(this)"></textarea>
+      <button id="chatSend" onclick="sendChatMessage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+  <button class="chat-toggle-btn" id="chatToggleBtn" onclick="toggleChat()">
+    <svg id="chatOpenIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <svg id="chatCloseIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <div class="chat-notif" id="chatNotif">1</div>
+  </button>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ============================================================
+   SECTION 1: UTILITY & UI LOGIC
+   ============================================================ */
+
+// NAV scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Mobile nav toggle
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// Smooth close mobile nav on outside click
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.hamburger');
+  if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+  }
+});
+
+// FAQ toggle
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// Scroll fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Testimonials carousel
+let tOffset = 0;
+function moveTestimonials(dir) {
+  const inner = document.getElementById('testimonialsInner');
+  const cards = inner.querySelectorAll('.testimonial-card');
+  const visibleCount = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+  const maxOffset = cards.length - visibleCount;
+  tOffset = Math.max(0, Math.min(maxOffset, tOffset + dir));
+  const cardW = cards[0].offsetWidth + 20;
+  inner.style.transform = `translateX(-${tOffset * cardW}px)`;
+}
+
+
+function submitBooking() {
+  const required = ['fName', 'fEmail', 'fPhone', 'fService'];
+  let valid = true;
+  required.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el.value.trim()) { el.style.borderColor = 'var(--danger)'; valid = false; }
+    else el.style.borderColor = '';
+  });
+  if (!valid) { alert('Please fill in all required fields.'); return; }
+
+  const name = document.getElementById('fName').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const phone = document.getElementById('fPhone').value.trim();
+  const service = document.getElementById('fService').value.trim();
+  const date = document.getElementById('fDate').value;
+  const time = document.getElementById('fTime').value;
+  const notes = document.getElementById('fNotes').value.trim();
+
+  // Send email via Formspree to genexdynamics@gmail.com
+  fetch('https://formspree.io/f/mojzwezp', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+   body: JSON.stringify({
+  name, email, phone, service,
+  preferred_date: date,
+  preferred_time: time,
+  notes,
+  _replyto: email,
+  _subject: `City Coolers Quote Request: ${service} — ${name}`,
+  _to: 'alexofori994@gmail.com'
+})
+  }).catch(() => {}); // silent fail — demo still proceeds
+
+  document.getElementById('bookingForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  showSuccessNotification(name);
+
+  // Auto-trigger chat follow-up
+  setTimeout(() => {
+    openChat();
+    setTimeout(() => addBotMessage(`Thanks, ${name}! 🎉 Your booking request has been received and our team has been notified. You'll get a confirmation within 30 minutes. Is there anything else I can help you with?`, ['Service details', 'Pricing questions', 'Prepare for the visit', 'Chat on WhatsApp']), 800);
+  }, 2500);
+}
+
+function showSuccessNotification(name) {
+  const notif = document.createElement('div');
+  notif.id = 'apexSuccessNotif';
+  notif.style.cssText = `
+    position:fixed; top:0; left:0; right:0; z-index:99999;
+    background:linear-gradient(135deg,#00a672,#00c97a);
+    color:white; padding:0; font-family:var(--font-body);
+    box-shadow:0 8px 40px rgba(0,166,114,0.45);
+    transform:translateY(-100%); transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  `;
+  notif.innerHTML = `
+    <div style="max-width:1140px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+      <div style="width:48px;height:48px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div style="flex:1;min-width:200px;">
+     <div style="font-weight:700;font-size:1.1rem;margin-bottom:3px;">✅ Request received, ${name}! City Coolers Engineering has been notified.</div>
+<div style="opacity:0.9;font-size:0.875rem;">Our team will contact you within 2 hours to confirm your appointment. Most jobs are scheduled same-day or next-day across Takoradi.</div>
+
+        </div>
+      <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">
+        <a href="https://wa.me/233546999753" target="_blank" style="display:inline-flex;align-items:center;gap:7px;padding:10px 18px;background:white;color:#00a672;border-radius:8px;font-weight:700;font-size:0.875rem;text-decoration:none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <button onclick="document.getElementById('apexSuccessNotif').style.transform='translateY(-100%)'" style="padding:10px 14px;background:rgba(255,255,255,0.2);color:white;border:none;border-radius:8px;font-size:0.875rem;cursor:pointer;font-weight:600;">✕ Close</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(notif);
+  setTimeout(() => { notif.style.transform = 'translateY(0)'; }, 50);
+  setTimeout(() => { notif.style.transform = 'translateY(-100%)'; }, 12000);
+}
+
+/* ============================================================
+   SECTION 2: COST ESTIMATOR
+   ============================================================ */
+const estData = { service: null, size: null, tier: null };
+let currentEstStep = 1;
+
+function selectEstOption(btn, key, val) {
+  const parent = btn.closest('.estimator-options');
+  parent.querySelectorAll('.est-option').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  estData[key] = val;
+  const nextBtn = document.getElementById('estNext' + currentEstStep);
+  if (nextBtn) nextBtn.removeAttribute('disabled');
+}
+
+function nextEstStep() {
+  document.getElementById('estStep' + currentEstStep).classList.remove('active');
+  currentEstStep++;
+  document.getElementById('estStep' + currentEstStep).classList.add('active');
+}
+
+function showEstResult() {
+  document.getElementById('estStep3').classList.remove('active');
+  document.getElementById('estResult').classList.add('active');
+  
+  const ranges = {
+    repair: { small: { good: [150, 450], better: [150, 650], best: [150, 850], unsure: [150, 650] }, medium: { good: [200, 650], better: [200, 850], best: [200, 1100], unsure: [200, 800] }, large: { good: [300, 900], better: [300, 1200], best: [300, 1600], unsure: [300, 1100] }, xlarge: { good: [400, 1500], better: [400, 2200], best: [400, 3000], unsure: [400, 2000] } },
+    install_ac: { small: { good: [2800, 4200], better: [3500, 5500], best: [5000, 7500], unsure: [3000, 5500] }, medium: { good: [3500, 5500], better: [4500, 7000], best: [6500, 9500], unsure: [4000, 7000] }, large: { good: [5000, 7500], better: [6500, 10000], best: [9000, 14000], unsure: [5500, 10000] }, xlarge: { good: [8000, 14000], better: [12000, 20000], best: [18000, 35000], unsure: [10000, 20000] } },
+    install_furnace: { small: { good: [2200, 3500], better: [3000, 4800], best: [4500, 7000], unsure: [2500, 4500] }, medium: { good: [3000, 4800], better: [4000, 6500], best: [6000, 9500], unsure: [3200, 6000] }, large: { good: [4200, 7000], better: [5500, 9000], best: [8000, 13000], unsure: [4500, 8500] }, xlarge: { good: [7000, 12000], better: [10000, 17000], best: [15000, 25000], unsure: [8000, 15000] } },
+    maintenance: { small: { good: [79, 129], better: [129, 199], best: [199, 299], unsure: [99, 199] }, medium: { good: [99, 149], better: [149, 249], best: [249, 349], unsure: [120, 220] }, large: { good: [129, 199], better: [199, 299], best: [299, 449], unsure: [149, 280] }, xlarge: { good: [199, 399], better: [350, 650], best: [600, 1200], unsure: [250, 600] } }
+  };
+  
+  const svc = estData.service, sz = estData.size, tr = estData.tier;
+  const range = ranges[svc]?.[sz]?.[tr] || [500, 2000];
+  const fmt = n => '$' + n.toLocaleString();
+  document.getElementById('estPriceRange').textContent = `${fmt(range[0])}–${fmt(range[1])}`;
+  
+  const notes = {
+    repair: 'Repair costs vary widely based on the specific fault. Diagnostic fee ($89) is included. Parts and refrigerant costs are the primary variable.',
+    install_ac: 'Full system installation including equipment, labor, permit, and startup. Ductwork modifications billed separately if needed.',
+    install_furnace: 'Includes furnace, flue/venting, gas line connection, thermostat wiring, and startup. High-efficiency (95%+ AFUE) models are at the upper range.',
+    maintenance: 'Per-visit tune-up pricing. Our annual maintenance plans (shown above) offer better value for recurring service.'
+  };
+  document.getElementById('estNote').textContent = notes[svc] || '';
+  
+  const details = {
+    good: '⚡ Good-tier equipment is reliable and meets all safety/efficiency standards. Great for budget-conscious homeowners. Typically 13–15 SEER AC, 80% AFUE furnace.',
+    better: '⭐ Better-tier offers a meaningful efficiency upgrade with a reasonable payback period. Usually 16–18 SEER AC, 92%+ AFUE furnace. Most popular choice.',
+    best: '🏆 Premium equipment delivers the lowest operating costs, quietest operation, and longest lifespan. Ideal if you plan to stay in your home 10+ years.',
+    unsure: '🤔 Our technician will evaluate your specific situation and recommend the right efficiency tier based on your usage, local climate, and budget goals.'
+  };
+  document.getElementById('estDetails').textContent = details[tr] || '';
+}
+
+function resetEstimator() {
+  currentEstStep = 1;
+  estData.service = estData.size = estData.tier = null;
+  document.querySelectorAll('.estimator-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('estStep1').classList.add('active');
+  document.querySelectorAll('.est-option').forEach(o => o.classList.remove('selected'));
+  ['estNext1','estNext2','estNext3'].forEach(id => document.getElementById(id)?.setAttribute('disabled', ''));
+}
+
+/* ============================================================
+   SECTION 3: AI CHATBOT KNOWLEDGE BASE
+   ============================================================ */
+
+const KNOWLEDGE_BASE = {
+
+  greetings: {
+    patterns: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening', 'howdy', 'what\'s up', 'help', 'start'],
+    responses: [
+      "Hi there! 👋 I'm the City Coolers AI assistant. I'm here to help you with any HVAC questions — whether that's troubleshooting an issue, understanding your options for a new system, getting a cost estimate, or booking a service. What can I help you with today?",
+      "Hello! Welcome to City Coolers. I can answer questions about our services, pricing, equipment, energy efficiency, troubleshooting, and more. What's on your mind?",
+      "Hey! Great to hear from you. I'm your dedicated HVAC assistant — I know quite a bit about heating, cooling, air quality, and everything in between. What do you need help with?"
+    ],
+    suggestions: ['AC not cooling', 'New system cost', 'Book a service', 'Maintenance plan']
+  },
+
+  ac_not_cooling: {
+    patterns: ['ac not cooling', 'air conditioning not working', 'ac broken', 'ac stopped', 'ac isn\'t working', 'not cooling', 'warm air', 'hot air coming', 'ac running but not cooling', 'air conditioner not working', 'ac won\'t turn on', 'ac unit not working', 'cooling system', 'ac not cold'],
+    responses: [
+      "I can help you troubleshoot that. An AC running but not cooling is one of the most common issues we see. Here are the most likely causes:\n\n🔍 **Top causes by likelihood:**\n1. **Clogged air filter** — If it hasn't been changed in 3+ months, restricted airflow is likely the culprit. Check and replace it first.\n2. **Low refrigerant / refrigerant leak** — You'll need a technician for this; it's illegal to add refrigerant without EPA certification.\n3. **Dirty condenser coils** — The outdoor unit may be caked with dirt/debris, blocking heat transfer.\n4. **Frozen evaporator coil** — Is ice visible on the indoor unit? Turn off the AC and run just the fan to thaw it.\n5. **Failed compressor** — A humming outdoor unit that doesn't start is a sign.\n\nHave you noticed any of these symptoms? I can give you more specific guidance based on what you're seeing."
+    ],
+    suggestions: ['Check air filter', 'Could be a refrigerant leak', 'Book a repair technician', 'AC making strange noises']
+  },
+
+  refrigerant_leak: {
+    patterns: ['refrigerant', 'freon', 'r-22', 'r-410a', 'r22', 'r410', 'refrigerant leak', 'low refrigerant', 'freon leak', 'recharge', 'add refrigerant'],
+    responses: [
+      "Refrigerant questions are important — let me give you the full picture:\n\n**Signs of a refrigerant leak:**\n• AC blowing warm/lukewarm air\n• Ice buildup on the indoor evaporator coil\n• Hissing or bubbling sounds from the unit\n• Higher than normal electricity bills\n• The outdoor unit runs constantly without cooling\n\n**What you need to know:**\n- Refrigerant doesn't 'run out' — it leaks. Simply recharging without fixing the leak is a temporary and wasteful fix.\n- R-22 (older systems) is now over $100/lb and being phased out. If you have an R-22 system, replacement is often more cost-effective.\n- R-410A is the current standard. If your system needs a recharge, we'll also locate and repair the leak.\n\n**Cost range:** Leak detection + repair + recharge typically runs $350–$850 depending on leak location and refrigerant type.\n\nWould you like to schedule a diagnostic appointment?"
+    ],
+    suggestions: ['Book a refrigerant check', 'R-22 vs R-410A systems', 'How much does a recharge cost?', 'Should I replace my old AC?']
+  },
+
+  heating_not_working: {
+    patterns: ['heat not working', 'furnace not working', 'heater broken', 'heating system', 'furnace stopped', 'no heat', 'furnace won\'t turn on', 'heat pump not heating', 'cold air from furnace', 'furnace blowing cold air', 'boiler not working', 'heating broken'],
+    responses: [
+      "A heating failure can be serious — especially in winter. Let me walk you through the most common causes:\n\n**For furnaces (gas/electric):**\n1. **Thermostat setting** — Is it set to HEAT (not COOL) and set above current room temp?\n2. **Filter** — A clogged filter can trigger the furnace's safety shutoff. Replace it.\n3. **Pilot light / igniter** — Older systems have pilot lights; newer ones have electronic igniters that can fail.\n4. **Gas supply** — Check that the gas shutoff valve to the furnace is fully open.\n5. **Tripped circuit breaker** — Check your electrical panel for the furnace breaker.\n6. **Condensate drain clog** — High-efficiency furnaces can shut down if the drain is clogged.\n\n**For heat pumps:**\n- In very cold weather (<35°F), heat pumps switch to auxiliary heat. If aux heat isn't working, check the electric backup strips.\n- \"Emergency Heat\" mode bypasses the heat pump and runs on auxiliary only — use this only if the main system fails.\n\nIs the furnace not turning on at all, or running but not producing heat?"
+    ],
+    suggestions: ['Furnace makes strange sounds', 'Heat pump vs furnace', 'Emergency heating service', 'Furnace tune-up cost']
+  },
+
+  strange_noises: {
+    patterns: ['strange noise', 'loud noise', 'banging noise', 'rattling', 'squealing', 'grinding', 'clicking', 'humming', 'buzzing', 'hvac noise', 'ac noise', 'furnace noise', 'weird sound', 'loud hvac'],
+    responses: [
+      "HVAC sounds can tell you a lot about what's wrong. Here's a diagnostic guide:\n\n🔊 **Sound → Likely Cause:**\n\n• **Banging/clanking** — Loose or broken component (motor mount, blower wheel). Stop the unit and call us.\n• **Squealing/screeching** — Worn fan belt (older systems) or failing motor bearings. Often an early warning before full failure.\n• **Grinding** — Motor bearings have failed. If not addressed quickly, you'll need a more expensive motor replacement.\n• **Rattling** — Loose panels, debris in ductwork, or a loose component. Sometimes just a screw.\n• **Clicking repeatedly** — Relay or control board issue, or igniter failing to light the furnace.\n• **Buzzing** — Electrical issue: loose wiring, failing capacitor, or a contactor stuck in the relay.\n• **Humming (loud, outdoor unit)** — Capacitor failure is very common and inexpensive to fix ($150–$300).\n• **Popping/ticking in ducts** — Ducts expanding/contracting with temperature. Often normal.\n\nWhich sound is yours closest to?"
+    ],
+    suggestions: ['Capacitor replacement cost', 'Motor replacement cost', 'Book a diagnostic', 'Is it an emergency?']
+  },
+
+  cost_new_system: {
+    patterns: ['how much', 'cost', 'price', 'new system', 'replace', 'installation cost', 'how expensive', 'quote', 'estimate', 'pricing', 'new ac cost', 'new furnace cost', 'new hvac cost', 'total cost', 'affordable', 'cheap'],
+    responses: [
+      "Great question — here's a realistic breakdown of typical HVAC costs in today's market:\n\n**Central AC System (installed):**\n• 14–16 SEER (Entry): $3,200–$5,500\n• 17–20 SEER (Mid-range): $5,000–$8,000\n• 21+ SEER (Premium): $7,500–$12,000+\n\n**Gas Furnace (installed):**\n• 80% AFUE (Standard): $2,500–$4,200\n• 92–96% AFUE (High-efficiency): $3,800–$6,500\n• 97%+ AFUE (Premium): $5,500–$9,000\n\n**Heat Pump System (installed):**\n• Standard: $4,000–$7,000\n• High-efficiency / Cold-climate: $6,000–$12,000\n\n**Mini-Split (ductless, per zone):**\n• Single zone: $1,200–$3,500\n• Multi-zone systems add $800–$2,500 per zone\n\n**Factors that affect price:** Home size, existing ductwork condition, permit fees, refrigerant type, and chosen brand.\n\nWe offer **0% financing** for 18 months on qualifying purchases. Would you like a free in-home estimate?"
+    ],
+    suggestions: ['0% financing options', 'Which brand is best?', 'What SEER should I get?', 'Get a free estimate']
+  },
+
+  energy_efficiency: {
+    patterns: ['energy efficient', 'seer', 'energy bill', 'save energy', 'electricity bill', 'high energy bills', 'energy savings', 'efficiency', 'energy star', 'afue', 'hspf', 'green hvac', 'eco', 'lower bills'],
+    responses: [
+      "Energy efficiency is one of the biggest factors in your long-term HVAC costs. Here's what the ratings mean and what to aim for:\n\n**For Air Conditioners:**\n• SEER (Seasonal Energy Efficiency Ratio) — higher = more efficient\n• Federal minimum: 14 SEER (15 in Southeast/Southwest)\n• We recommend: **16–18 SEER** — the best value point\n• Moving from 10 SEER to 16 SEER cuts cooling costs by ~37%\n• 20+ SEER units are premium; payback is 8–12 years for most climates\n\n**For Furnaces:**\n• AFUE (Annual Fuel Utilization Efficiency) — 80% means 80 cents of every $1 of gas becomes heat\n• 80% AFUE: Standard, satisfies code\n• 95–97% AFUE: High-efficiency, saves $400–$700/yr in cold climates\n\n**Quick wins to lower your bills today:**\n1. Replace filters monthly (improves efficiency 5–15%)\n2. Add a smart thermostat — saves $150–$200/yr on average\n3. Seal duct leaks (typical home loses 20–30% of conditioned air)\n4. Insulate your attic if not already done\n5. Schedule a tune-up — a properly tuned system runs 15% more efficiently\n\nWould you like help calculating the payback period for a high-efficiency upgrade?"
+    ],
+    suggestions: ['Smart thermostat savings', 'Rebates & tax credits', 'Duct sealing services', 'Calculate my savings']
+  },
+
+  maintenance: {
+    patterns: ['maintenance', 'tune up', 'tune-up', 'service plan', 'annual service', 'filter', 'filter change', 'how often', 'when to service', 'maintenance plan', 'regular service', 'checkup'],
+    responses: [
+      "Regular maintenance is the single best investment you can make for your HVAC system. Here's what our tune-up includes and why it matters:\n\n**What's included in our comprehensive tune-up:**\n\n🔧 *Cooling System Check:*\n• Check refrigerant level and pressures\n• Clean condenser and evaporator coils\n• Inspect and test capacitors and contactors\n• Check thermostat calibration\n• Lubricate all moving parts\n• Inspect and clean condensate drain\n• Measure supply and return temperatures\n\n🔥 *Heating System Check:*\n• Inspect heat exchanger for cracks (CO leak risk)\n• Clean burners and igniter assembly\n• Check and adjust gas pressure\n• Test safety controls and limits\n• Inspect flue pipe and combustion\n• Test for carbon monoxide\n\n📊 *Why it matters:*\n• Prevents 85% of system breakdowns\n• Improves efficiency by 10–15%\n• Extends system life by 5–7 years\n• Required by most manufacturer warranties\n\n**Cost:** Single visit $89–$149 | Annual plans from $149/yr\n\nWould you like to sign up for our Comfort Shield plan?"
+    ],
+    suggestions: ['What does it cost?', 'Annual plans pricing', 'Book a tune-up', 'When should I service my system?']
+  },
+
+  brands: {
+    patterns: ['brand', 'carrier', 'trane', 'lennox', 'rheem', 'york', 'goodman', 'amana', 'american standard', 'mitsubishi', 'daikin', 'lg hvac', 'which brand', 'best brand', 'brand recommendation'],
+    responses: [
+      "Great question — brand choice matters for long-term reliability and warranty support. Here's our honest assessment:\n\n**Tier 1 — Premium (Best overall):**\n• **Carrier** — Excellent reliability, wide dealer network, 10-yr parts warranty\n• **Trane** — Outstanding durability ('Trane — it's hard to stop a Trane' is well-earned), great warranty\n• **Lennox** — Best-in-class efficiency ratings, innovative technology\n• **Mitsubishi** (mini-splits) — Undisputed leader in ductless technology\n\n**Tier 2 — Value Leaders (Great bang for buck):**\n• **Rheem / Ruud** — Solid reliability, widely available parts\n• **American Standard** (same factory as Trane) — Excellent quality, slightly lower price\n• **Daikin** — Strong in ductless; growing central system reputation\n\n**Tier 3 — Budget (Reliable but basic):**\n• **Goodman / Amana** — Same parent company (Daikin). Good value if budget is the priority\n• **York** — Solid performance, good for commercial\n\n**Our recommendation:** For most homeowners, Carrier or Trane. For ductless systems, Mitsubishi is our top pick. We'll give you unbiased advice based on your specific situation — we're not tied to one manufacturer."
+    ],
+    suggestions: ['Carrier vs Trane comparison', 'Mini-split brands', 'What does installation include?', 'Get a free quote']
+  },
+
+  smart_thermostat: {
+    patterns: ['smart thermostat', 'nest', 'ecobee', 'honeywell', 'wifi thermostat', 'smart home', 'thermostat', 'ecobee4', 'nest learning', 'programmable thermostat', 'thermostat install', 'connected thermostat'],
+    responses: [
+      "Smart thermostats are one of the highest-ROI upgrades you can make — typically $150–$200/year in savings. Here's our breakdown:\n\n**Top picks we install and recommend:**\n\n🥇 **Ecobee SmartThermostat Premium (~$250)**\n• Our #1 pick for most homes\n• Includes remote room sensors (solves hot/cold spots)\n• Built-in Alexa speaker\n• Works with all HVAC types including heat pumps\n• Best energy reports and utility rebate programs\n\n🥈 **Google Nest Learning Thermostat (~$180–$250)**\n• Learns your schedule automatically\n• Beautiful display, very user-friendly\n• Best for homes already in the Google ecosystem\n• Doesn't include remote sensors\n\n🥉 **Honeywell T9/T10 Pro (~$150–$200)**\n• Professional-grade reliability\n• Excellent for zoned systems\n• Great app and geofencing\n\n**Installation:** $89–$129 (includes wiring check, compatibility verification, and app setup walkthrough)\n\n**Check:** Many utility companies offer $50–$150 rebates on smart thermostat installs. Ask us to check availability in your area!\n\nWould you like to schedule a smart thermostat installation?"
+    ],
+    suggestions: ['Schedule thermostat install', 'Check utility rebates', 'Does it work with my system?', 'Zone control systems']
+  },
+
+  air_quality: {
+    patterns: ['air quality', 'air purifier', 'air filter', 'dust', 'allergen', 'pollutant', 'indoor air', 'iaq', 'uv light', 'hepa', 'humidity', 'dry air', 'mold', 'air cleaner', 'germicidal', 'bacteria', 'virus', 'air purification', 'merv', 'pcoc', 'carbon monoxide'],
+    responses: [
+      "Indoor air quality is often overlooked but critically important — we spend 90% of our time indoors, and indoor air can be 2–5x more polluted than outdoor air. Here's what we offer:\n\n**Filtration:**\n• **Upgrade to MERV-13 filters** — captures 90%+ of particles including smoke and bacteria. Big upgrade from standard fiberglass.\n• **Whole-home media air cleaners** (Aprilaire, Honeywell) — 4-inch deep pleated filters with MERV 16 rating. Changed once per year.\n\n**Purification:**\n• **UV Germicidal Lights** — installed in your air handler, kills 99%+ of mold, bacteria, and viruses on the coil. One-time install, bulb replaced annually.\n• **Bipolar Ionization** (iWave, Reme Halo) — actively neutralizes pathogens and VOCs throughout the home. Works while air circulates.\n\n**Humidity Control:**\n• **Whole-home humidifier** — ideal for dry winters; target 35–50% RH. Linked directly to your furnace.\n• **Whole-home dehumidifier** — critical in humid climates. Prevents mold, dust mites, and wood damage.\n\n**Cost range:** UV light: $400–$700 installed | Media cleaner: $500–$900 | Humidifier: $600–$1,200\n\nWhat specific air quality concern do you have?"
+    ],
+    suggestions: ['UV light installation', 'Humidifier for dry air', 'Duct cleaning services', 'MERV filter ratings explained']
+  },
+
+  heat_pump: {
+    patterns: ['heat pump', 'heat pump system', 'heat pump install', 'heat pump repair', 'mini split', 'ductless', 'geothermal', 'cold climate heat pump', 'heat pump cost', 'heat pump vs furnace', 'dual fuel', 'variable speed'],
+    responses: [
+      "Heat pumps are rapidly becoming the smart choice for most climates. Here's everything you need to know:\n\n**What is a heat pump?**\nA heat pump provides BOTH heating AND cooling from a single system by moving heat rather than generating it — making it 2–4x more efficient than gas heating.\n\n**Types we install:**\n• **Traditional Heat Pump** — works well in climates that rarely go below 30°F\n• **Cold-Climate Heat Pump** (Mitsubishi H2i, Bosch IDS, Carrier Infinity) — effective down to -13°F! Excellent for northern climates\n• **Dual-Fuel System** — heat pump + gas furnace backup. Heat pump handles most days; furnace kicks in when below ~35°F\n• **Mini-Split / Ductless** — no ductwork needed. Perfect for additions, old homes, or zoned cooling/heating\n• **Geothermal** — uses ground temperature as heat source. 400–600% efficiency! Higher upfront, 5–8 year payback\n\n**Heat Pump vs Gas Furnace:**\n- Heat pump wins on operating cost in mild-to-moderate climates and where electricity is cheap\n- Gas wins in extreme cold climates or where gas prices are very low\n- Dual-fuel gives you the best of both\n\n**2024 Tax Credit:** The IRA provides up to $2,000 tax credit for qualifying heat pump installations. That's on top of utility rebates!\n\nShould I help you figure out which system is right for your climate and home?"
+    ],
+    suggestions: ['Heat pump tax credit', 'Mini-split installation', 'Heat pump cost comparison', 'Book a heat pump consultation']
+  },
+
+  emergency: {
+    patterns: ['emergency', 'urgent', 'right now', 'asap', 'immediately', 'broken now', 'no cooling', 'no heat', 'freezing', 'dangerous', 'smoke', 'burning smell', 'gas smell', 'carbon monoxide', 'fire'],
+    responses: [
+      "🚨 **I understand this is urgent.** Here's what you need to know:\n\n**If you smell gas or see smoke:** Leave the building immediately and call 911 before calling us.\n\n**If you suspect carbon monoxide:** Leave immediately, call 911. CO detectors should be on every floor.\n\n**For all other HVAC emergencies, call us directly:**\n📞 **(800) 555-1234 — Emergency Line, available 24/7**\n\nSelect option 1 for emergency service when prompted. Our on-call dispatcher will have a technician at your location typically within **1–2 hours**.\n\n**While you wait:**\n• For cooling emergencies in heat: Use portable fans, close blinds, go to a cooler part of the home\n• For heating emergencies in cold: Use electric space heaters (safely), add layers, focus on one room\n• For water/condensate leaking: Turn off the system at the thermostat and place towels to prevent damage\n\nDo you want me to walk you through any immediate safety steps?"
+    ],
+    suggestions: ['Call emergency line now', 'Gas leak safety steps', 'Carbon monoxide info', 'Book follow-up repair']
+  },
+
+  warranty: {
+    patterns: ['warranty', 'guarantee', 'coverage', 'warranty coverage', 'parts warranty', 'labor warranty', 'manufacturer warranty', 'warranty claim', 'warranty period'],
+    responses: [
+      "Here's a complete breakdown of warranties on our work:\n\n**Labor Warranty (Our Promise):**\n• All installation work: **12 months labor warranty**\n• If anything we installed fails due to workmanship, we return at no charge\n• Maintenance plan members receive extended labor coverage\n\n**Manufacturer Parts Warranties (typical):**\n• Carrier, Trane, Lennox: **10-year parts** (requires registration)\n• Goodman/Amana: **Lifetime heat exchanger, 10-year parts**\n• Mitsubishi ductless: **7-year parts + 7-year compressor**\n• Most other brands: **5–10 year parts**\n\n**Important:** We handle ALL warranty registrations on your behalf within 24 hours of installation. Don't do this yourself — we make sure it's done correctly with the right documentation.\n\n**Warranty Claims:**\n• If your system has an issue under warranty, call us. We diagnose whether it's a warranty issue and handle the claim with the manufacturer directly.\n• You pay only the diagnostic fee and any non-warranty labor.\n\n**Extended Warranty Options:**\n• Additional 5–10 year labor warranties available through our maintenance plans\n• Third-party extended service contracts also available\n\nIs there a specific warranty question I can help clarify?"
+    ],
+    suggestions: ['Maintenance plan benefits', 'What voids my warranty?', 'Book a warranty service', 'Extended warranty options']
+  },
+
+  permits: {
+    patterns: ['permit', 'permits', 'inspection', 'building code', 'code compliant', 'licensed', 'legal', 'do i need a permit', 'permit required'],
+    responses: [
+      "Permits are an important topic — here's the honest truth about HVAC permits:\n\n**When permits are required:**\n✅ New HVAC system installation (almost always)\n✅ Replacing an existing system with a different type\n✅ Adding new ductwork or significant modifications\n✅ Adding a new zone or extending to new space\n\n**When permits may not be required:**\n• Like-for-like equipment replacement in some jurisdictions\n• Minor repairs (capacitor, thermostat, minor components)\n• Filter/maintenance work\n\n**What we do:**\n• We pull all required permits for every installation\n• Permit fees are included in our quotes — no surprise additions\n• We schedule the required municipal inspection\n• All our work is performed to or above local code\n\n**Why this matters for you:**\n• Unpermitted work can void your homeowner's insurance\n• It can cause issues when selling your home\n• It's a safety issue — inspections protect your family\n• Some manufacturer warranties require permitted installation\n\n⚠️ *Be cautious of any contractor who says 'you don't need a permit for this' when replacing a full system. This is a red flag.*\n\nWould you like to know more about the installation process?"
+    ],
+    suggestions: ['What does installation include?', 'How long does install take?', 'Book an installation', 'Financing options']
+  },
+
+  financing: {
+    patterns: ['financing', 'finance', 'payment plan', 'monthly payment', 'afford', 'can\'t afford', 'budget', '0 percent', 'zero percent', 'apr', 'loan', 'credit', 'pay over time', 'flexible payment'],
+    responses: [
+      "We believe everyone deserves a comfortable home, regardless of budget. Here are our financing options:\n\n**Our Current Financing Programs:**\n\n💳 **0% APR for 18 Months**\n• No interest if paid in full within 18 months\n• Available on qualifying systems ($3,000+)\n• Soft credit check for pre-qualification\n\n📅 **Extended Terms (Low Monthly Payments)**\n• 36, 60, or 84 month options\n• Competitive interest rates\n• Example: $6,000 system = ~$95/month on 84-month plan\n\n🔄 **Same-Day Approval**\n• Decision in under 2 minutes\n• No hard credit pull for initial qualification\n\n**Additional Ways to Save:**\n• **Utility rebates:** Many local utilities offer $300–$1,500 for high-efficiency equipment. We identify and help you apply for these.\n• **Federal Tax Credits (2024):** Up to $600 for high-efficiency AC/furnace; up to $2,000 for qualifying heat pumps under the Inflation Reduction Act.\n• **State incentives:** Many states have additional incentive programs. Ask us what's available in your area.\n\n**Total example:**\n$8,000 new system → $1,500 utility rebate → $600 tax credit = effective cost of $5,900, financed at $94/month over 5 years.\n\nWould you like help running the numbers for your situation?"
+    ],
+    suggestions: ['IRA tax credit details', 'Utility rebates near me', 'Get a free quote', 'Calculate monthly payment']
+  },
+
+  duct_work: {
+    patterns: ['ductwork', 'ducts', 'duct cleaning', 'duct repair', 'duct sealing', 'air duct', 'leaky ducts', 'duct leak', 'zoning', 'zone system', 'multiple zones'],
+    responses: [
+      "Ductwork is the circulatory system of your home's HVAC — when it's compromised, efficiency and comfort suffer significantly.\n\n**Duct Cleaning:**\n• Recommended every **5–10 years** or after major renovation/construction\n• Signs you need it: visible dust from vents, musty smell, worsening allergies, recent rodent/pest issues\n• Our process: HEPA-vacuum truck, rotating brush system, sanitizer treatment\n• Cost: $350–$700 for average home, including all registers and trunk lines\n\n**Duct Sealing:**\n• The average home loses **20–30% of conditioned air** through duct leaks\n• Sealing with mastic or Aeroseal can recover this lost efficiency\n• **Aeroseal** — the gold standard: pressurizes system, seals from inside without opening walls. Costs $1,500–$2,500 but pays back in 2–4 years.\n• Manual sealing with mastic: $300–$800 for accessible ducts\n\n**Duct Zoning:**\n• Split your home into independently controlled zones (upstairs/downstairs, bedrooms/living areas)\n• Uses motorized dampers and multiple thermostats\n• Eliminates hot/cold spots, saves 20–30% on HVAC costs\n• Cost: $2,000–$4,000 for a typical 2-zone system\n\nDo you have a specific duct issue you're dealing with?"
+    ],
+    suggestions: ['Aeroseal duct sealing', 'Book duct cleaning', 'Zone system cost', 'Air quality services']
+  },
+
+  booking: {
+    patterns: ['book', 'schedule', 'appointment', 'technician', 'when can', 'availability', 'come out', 'send someone', 'visit', 'inspection'],
+    responses: [
+      "I'd be happy to help you schedule a service! 📅\n\n**Fastest way to book:**\n1. **Scroll up** and use our online booking form — takes 2 minutes\n2. **Call us** at (800) 555-1234 — available 24/7\n3. **Continue chatting** — tell me your issue and I'll gather the details\n\n**Available appointment times:**\n• Monday–Friday: 7am–8pm\n• Saturday: 8am–6pm\n• Sunday: Emergency and premium appointments only\n• 24/7: Emergency service always available\n\n**What to expect:**\n• Confirmation text/email within 30 minutes (during business hours)\n• Tech arrival text 30 minutes before scheduled window\n• Upfront quote before any work begins\n• Most repairs completed same-day\n\nWhat type of service do you need? I can help make sure we send the right technician with the right equipment.What type of service do you need? I can help make sure we send the right technician with the right equipment.\n\n💬 **Prefer WhatsApp?** Tap the button below to chat with us directly.   "
+    ],
+       suggestions: ['Emergency same-day service', 'Regular repair appointment', 'New system consultation', 'WhatsApp us now']
+  },
+
+  system_age: {
+    patterns: ['how old', 'age of system', 'replace or repair', 'old hvac', 'old ac', 'old furnace', 'when to replace', 'lifespan', 'when should i replace', 'system is old', '10 year', '15 year', '20 year', 'worth repairing'],
+    responses: [
+      "This is one of the most important questions homeowners face. Here's the framework we use:\n\n**Average HVAC Lifespans:**\n• Central AC: 12–18 years\n• Gas Furnace: 15–25 years\n• Heat Pump: 12–16 years\n• Ductless Mini-Split: 15–20 years\n• Boiler: 20–35 years\n\n**The '$5,000 Rule' for Repair vs Replace:**\nMultiply the repair cost by the age of the unit. If the result exceeds $5,000, replacement is usually more economical.\n\nExample: 14-year-old system needs a $400 repair → 14 × $400 = $5,600 → lean toward replacement\n\n**Strong signs to replace:**\n• System is over 10–12 years old\n• You've had 2+ major repairs in the past 2 years\n• Your energy bills have increased significantly\n• The system uses R-22 refrigerant (being phased out, very expensive)\n• It can no longer maintain set temperature on very hot/cold days\n• You're facing a repair over $1,000 on an older system\n\n**When repair makes sense:**\n• System is less than 8 years old\n• The repair is minor (capacitor, sensor, thermostat)\n• System is well-maintained and efficient\n\nHow old is your current system and what's the repair quote you received?"
+    ],
+    suggestions: ['Get a replacement quote', 'Cost of new system', 'Financing options', 'Trade-in value']
+  },
+
+  carbon_monoxide: {
+    patterns: ['carbon monoxide', 'co detector', 'co leak', 'gas leak', 'smell gas', 'burning smell', 'exhaust leak', 'cracked heat exchanger'],
+    responses: [
+      "⚠️ **Carbon monoxide (CO) is extremely serious — please read this carefully:**\n\n**If you suspect CO right now:**\n1. Leave the building immediately with everyone including pets\n2. Call 911 from outside\n3. Do not go back inside until cleared by emergency services\n\n**Symptoms of CO exposure:** Headache, dizziness, nausea, confusion, or flu-like symptoms that improve when you leave the building.\n\n**What causes CO in HVAC systems:**\n• Cracked heat exchanger in a gas furnace — this is the #1 HVAC-related CO risk\n• Blocked or damaged flue pipe\n• Poor combustion due to dirty burners\n• Backdrafting from improper venting\n\n**Prevention:**\n• Have your furnace inspected every fall — we specifically check the heat exchanger\n• Install CO detectors on every floor and outside sleeping areas\n• Replace CO detectors every 5–7 years (they expire!)\n• Never run a generator, grill, or vehicle in an attached garage\n\n**Our heat exchanger inspection** uses visual inspection, combustion analysis, and chemical testing to detect even hairline cracks.\n\nIs this an immediate concern? If so, please call 911 first, then call us at (800) 555-1234."
+    ],
+    suggestions: ['Book a furnace safety inspection', 'Heat exchanger replacement cost', 'CO detector recommendations', 'Emergency HVAC line']
+  },
+
+  comparison: {
+    patterns: ['vs', 'compare', 'difference between', 'which is better', 'central air vs', 'heat pump vs', 'gas vs electric', 'forced air vs', 'ducted vs ductless'],
+    responses: [
+      "I can help you compare your options! Here are the most common comparisons we walk customers through:\n\n**Central AC vs Ductless Mini-Split:**\n• Central: Lower upfront if ducts exist, cools whole home uniformly\n• Mini-Split: No ductwork needed, zone-specific, quieter, more efficient\n• Winner for additions/older homes: Mini-Split\n\n**Gas Furnace vs Heat Pump:**\n• Gas: Lower upfront, very effective in extreme cold (-20°F), lower operating cost where gas is cheap\n• Heat Pump: Lower operating cost in mild climates, provides cooling too, qualifies for $2,000 tax credit\n• Winner for most climates today: Dual-fuel (heat pump + gas backup)\n\n**Single-Stage vs Two-Stage vs Variable Speed:**\n• Single-stage: On/off, less expensive, good for mild climates\n• Two-stage: Two speeds, 30% more efficient, better humidity control\n• Variable-speed: Modulates 40–100%, most efficient, quietest, best comfort and humidity control\n• Winner for comfort: Variable-speed (but costs 30–50% more upfront)\n\nTell me more about your specific situation and I can give you a personalized recommendation."
+    ],
+    suggestions: ['Heat pump vs furnace details', 'Mini-split vs central air', 'Variable speed benefits', 'Get a consultation']
+  },
+
+  thanks: {
+    patterns: ['thank you', 'thanks', 'thank', 'appreciate', 'helpful', 'great help', 'that helps'],
+    responses: [
+      "You're very welcome! 😊 Is there anything else I can help you with — whether it's more information, a cost estimate, or getting a service scheduled?",
+      "Happy to help! That's exactly what I'm here for. Any other questions about your HVAC system or our services?",
+      "My pleasure! Feel free to ask anything else. When you're ready, our team is just a call away at (800) 555-1234."
+    ],
+    suggestions: ['Book a service', 'Get an estimate', 'More HVAC questions', 'Contact the team']
+  },
+
+  fallback: {
+    responses: [
+      "That's a great question — let me make sure I give you the most helpful answer. Could you tell me a bit more? For example: what system type you have (AC, furnace, heat pump), the age of the system, and what symptoms you're seeing? That way I can give you very specific guidance.",
+      "I want to make sure I answer that accurately. To give you the best help, could you describe the issue in a bit more detail — what you're hearing, seeing, or experiencing? HVAC problems can have similar symptoms with very different causes, so the details really help.",
+      "I can definitely help with that. Our team of NATE-certified technicians has seen it all. Could you share a bit more about what you're experiencing? Or if you'd prefer to speak directly with our team, call us at (800) 555-1234 — we're available 24/7.",
+      "Good question! I may need a little more context to give you the most accurate answer. Could you tell me more about your situation? Alternatively, I can connect you with one of our certified technicians who can answer in real-time."
+    ]
+  }
+};
+
+/* ============================================================
+   SECTION 4: CHATBOT ENGINE
+   ============================================================ */
+
+// Context state management
+const chatContext = {
+  turnCount: 0,
+  userName: null,
+  systemType: null,
+  systemAge: null,
+  issue: null,
+  lastIntent: null,
+  location: null,
+  awaitingFollowUp: false,
+  bookingInitiated: false
+};
+
+// Intent scoring system
+function detectIntent(input) {
+  const normalized = input.toLowerCase().trim();
+  let bestIntent = null;
+  let bestScore = 0;
+
+  for (const [intent, data] of Object.entries(KNOWLEDGE_BASE)) {
+    if (intent === 'fallback') continue;
+    const patterns = data.patterns || [];
+    let score = 0;
+    for (const pattern of patterns) {
+      if (normalized.includes(pattern)) {
+        // Longer matches score higher
+        score = Math.max(score, pattern.length * 2);
+      }
+    }
+    // Boost if matches last intent context
+    if (score > 0 && chatContext.lastIntent === intent) score += 3;
+    if (score > bestScore) { bestScore = score; bestIntent = intent; }
+  }
+  return bestScore > 0 ? bestIntent : null;
+}
+
+// Extract context from message
+function extractContext(input) {
+  const lower = input.toLowerCase();
+  // Detect system mentions
+  if (lower.includes('ac') || lower.includes('air condition') || lower.includes('cooling')) chatContext.systemType = 'AC';
+  if (lower.includes('furnace') || lower.includes('heating') || lower.includes('heat pump')) chatContext.systemType = lower.includes('heat pump') ? 'heat pump' : 'furnace';
+  // Detect age mentions
+  const ageMatch = lower.match(/(\d+)\s*(year|yr)/);
+  if (ageMatch) chatContext.systemAge = parseInt(ageMatch[1]);
+  // Detect name
+  const nameMatch = lower.match(/(?:my name is|i'm|i am|call me)\s+([a-z]+)/i);
+  if (nameMatch) chatContext.userName = nameMatch[1];
+}
+
+// Get response for intent
+function getResponse(intent, userInput) {
+  const data = KNOWLEDGE_BASE[intent];
+  if (!data) return getResponse('fallback', userInput);
+  const responses = data.responses;
+  const response = responses[Math.floor(Math.random() * responses.length)];
+
+  // Personalize with context
+  let personalized = response;
+  if (chatContext.userName) personalized = personalized.replace(/there!/, `${chatContext.userName}!`);
+
+  return personalized;
+}
+
+function getSuggestions(intent) {
+  const data = KNOWLEDGE_BASE[intent];
+  return data?.suggestions || ['Book a service', 'Get an estimate', 'Emergency line', 'Learn more'];
+}
+
+// Conversational add-ons (context-aware follow-ups)
+function getContextualFollowUp() {
+  if (chatContext.systemAge && chatContext.systemAge > 12 && chatContext.lastIntent !== 'system_age') {
+    return '\n\n💡 *By the way — you mentioned your system is ' + chatContext.systemAge + ' years old. At this age, it\'s worth discussing whether repair or replacement makes more economic sense. Want me to walk you through the comparison?*';
+  }
+  if (chatContext.turnCount === 3 && !chatContext.bookingInitiated) {
+    return '\n\n📞 *You can always book a no-obligation assessment if you\'d like an expert to evaluate in person — no cost, no pressure.*';
+  }
+  return '';
+}
+
+/* ============================================================
+   SECTION 5: CHAT UI ENGINE
+   ============================================================ */
+
+let chatOpen = false;
+let isTyping = false;
+
+function toggleChat() {
+  chatOpen ? closeChat() : openChat();
+}
+
+function openChat() {
+  chatOpen = true;
+  document.getElementById('chatWindow').classList.add('open');
+  document.getElementById('chatOpenIcon').style.display = 'none';
+  document.getElementById('chatCloseIcon').style.display = 'block';
+  document.getElementById('chatNotif').style.display = 'none';
+  document.getElementById('chatInput').focus();
+  
+  // Initial message if first open
+  if (chatContext.turnCount === 0) initChat();
+}
+
+function closeChat() {
+  chatOpen = false;
+  document.getElementById('chatWindow').classList.remove('open');
+  document.getElementById('chatOpenIcon').style.display = 'block';
+  document.getElementById('chatCloseIcon').style.display = 'none';
+}
+
+function initChat() {
+  setTimeout(() => {
+    addBotMessage("Hey there! 👋 I'm your City Coolers AI assistant. I'm here 24/7 to help with HVAC questions, troubleshooting, pricing, and booking. What can I help you with today?", 
+      ['AC not cooling', 'Heating issue', 'New system cost', 'Book a service']);
+    chatContext.turnCount++;
+  }, 400);
+}
+
+function addBotMessage(text, suggestions = []) {
+  const msgs = document.getElementById('chatMessages');
+  
+  // Show typing indicator
+  const typing = document.createElement('div');
+  typing.className = 'msg bot';
+  typing.id = 'typingIndicator';
+  typing.innerHTML = `<div class="msg-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="typing-indicator"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
+  msgs.appendChild(typing);
+  msgs.scrollTop = msgs.scrollHeight;
+
+  // Simulate typing delay based on message length
+  const delay = Math.min(600 + text.length * 8, 2200);
+
+  setTimeout(() => {
+    // Remove typing indicator
+    const indicator = document.getElementById('typingIndicator');
+    if (indicator) indicator.remove();
+
+    // Add actual message
+    const msgEl = document.createElement('div');
+    msgEl.className = 'msg bot';
+    
+    // Process markdown-like formatting
+    const formatted = text
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+    
+    const now = new Date();
+    const timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+    
+    msgEl.innerHTML = `
+      <div class="msg-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <div>
+        <div class="msg-bubble">${formatted}</div>
+        <div class="msg-time">${timeStr}</div>
+      </div>`;
+    msgs.appendChild(msgEl);
+    msgs.scrollTop = msgs.scrollHeight;
+
+    // Update suggestions
+    if (suggestions.length > 0) {
+      const sugg = document.getElementById('chatSuggestions');
+      sugg.innerHTML = '';
+      suggestions.forEach(s => {
+        const btn = document.createElement('button');
+        btn.className = 'suggestion-btn';
+        btn.textContent = s;
+        btn.onclick = () => processSuggestion(s);
+        sugg.appendChild(btn);
+      });
+    }
+  }, delay);
+}
+
+function addUserMessage(text) {
+  const msgs = document.getElementById('chatMessages');
+  const msgEl = document.createElement('div');
+  msgEl.className = 'msg user';
+  const now = new Date();
+  const timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+  msgEl.innerHTML = `
+    <div>
+      <div class="msg-bubble">${text}</div>
+      <div class="msg-time">${timeStr}</div>
+    </div>
+    <div class="msg-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>`;
+  msgs.appendChild(msgEl);
+  msgs.scrollTop = msgs.scrollHeight;
+  // Clear suggestions
+  document.getElementById('chatSuggestions').innerHTML = '';
+}
+
+function processSuggestion(text) {
+  if (text.toLowerCase().includes('whatsapp')) {
+    addUserMessage(text);
+    addBotMessage("Opening WhatsApp now — you'll be connected directly to our team! 📱 We typically respond within 5 minutes during business hours.", ['Book via form instead', 'Call us directly', 'Continue chatting here']);
+    setTimeout(() => { window.open('https://wa.me/233546999753', '_blank'); }, 800);
+    return;
+  }
+  addUserMessage(text);
+  processInput(text);
+}
+
+function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text || isTyping) return;
+  input.value = '';
+  input.style.height = '';
+  addUserMessage(text);
+  processInput(text);
+}
+
+function processInput(text) {
+  isTyping = true;
+  extractContext(text);
+  chatContext.turnCount++;
+
+  const intent = detectIntent(text);
+  const resolvedIntent = intent || 'fallback';
+
+  let response;
+  if (resolvedIntent === 'fallback') {
+    const fallbacks = KNOWLEDGE_BASE.fallback.responses;
+    response = fallbacks[chatContext.turnCount % fallbacks.length];
+  } else {
+    response = getResponse(resolvedIntent, text);
+  }
+
+  // Add contextual follow-up
+  const followUp = getContextualFollowUp();
+  if (followUp) response += followUp;
+
+  chatContext.lastIntent = resolvedIntent;
+
+  const suggestions = getSuggestions(resolvedIntent);
+
+  // Special booking intent
+  if (resolvedIntent === 'booking') {
+    chatContext.bookingInitiated = true;
+  }
+
+  addBotMessage(response, suggestions);
+
+  // Re-enable after expected delay
+  const delay = Math.min(800 + response.length * 8, 2500);
+  setTimeout(() => { isTyping = false; }, delay);
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendChatMessage();
+  }
+}
+
+function autoResizeInput(el) {
+  el.style.height = '';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+// Show notification badge after 3 seconds
+setTimeout(() => {
+  if (!chatOpen) {
+    document.getElementById('chatNotif').style.display = 'flex';
+  }
+}, 3000);
+
+/* ============================================================
+   SECTION 6: PAGE INITIALIZATION
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  // Set min date for booking form
+  const dateInput = document.getElementById('fDate');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+    dateInput.value = tomorrow.toISOString().split('T')[0];
+  }
+});
+
+</script>
+</body>
+</html>
